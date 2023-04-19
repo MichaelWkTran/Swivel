@@ -11,7 +11,6 @@ public static class SaveSystem
     [Serializable] public class SaveData
     {
         //Game Variables
-        public int m_highScore;
         public float m_money;
 
         public string m_currentSkinName;
