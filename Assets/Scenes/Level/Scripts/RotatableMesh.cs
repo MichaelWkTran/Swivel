@@ -8,20 +8,33 @@ public class RotatableMesh : MonoBehaviour
     [SerializeField] float m_dragSensitivity = 1.0f;
     [SerializeField] float m_snapSlerpFactor = 1.0f;
     public bool m_isDragging = false;
-    public Color m_faceColour;
 
     Vector2 m_currentMousePos;
     Vector2 m_prevMousePos;
     public int m_targetFaceIndex { get; private set; } = -1;
-    SpriteRenderer[] m_faceTextures;
-    public SpriteRenderer[] m_FaceTextures { get { return m_faceTextures; } }
+
+    public SpriteRenderer[] m_faceTextures { get; private set; }
     public float m_faceTextureOffset = 0.01f;
+
+    [SerializeField] RotatableMeshGameOver m_rotatableMeshGameOverPrefab;
+    public RotatableMeshGameOver m_RotatableMeshGameOverPrefab { get { return m_rotatableMeshGameOverPrefab; } }
 
     void Start()
     {
         SetColour();
-        m_faceTextures = new SpriteRenderer[transform.childCount];
-        for (int i = 0; i < m_faceTextures.Length; i++) m_faceTextures[i] = transform.GetChild(i).GetComponent<SpriteRenderer>();
+
+        //Select Random Image from m_SpriteGroupAsset
+        //var avalibleSprites = new List<Sprite>(GameMode.m_SpriteGroupAsset.m_silhouetteSprites);
+        m_faceTextures = GetComponentsInChildren<SpriteRenderer>(true);
+        //for (int i = 0; i < m_faceTextures.Length; i++)
+        //{
+        //    int spriteIndex = Random.Range(0, avalibleSprites.Count);
+        //    m_faceTextures[i].sprite = avalibleSprites[spriteIndex];
+        //    avalibleSprites.RemoveAt(spriteIndex);
+        //}
+
+        //For debugging, select sequencial image from m_SpriteGroupAsset
+        //for (int i = 0; i < m_faceTextures.Length; i++) m_faceTextures[i].sprite = avalibleSprites[i];
     }
 
     void Update()
@@ -121,8 +134,13 @@ public class RotatableMesh : MonoBehaviour
     public void SetColour()
     {
         Material material = GetComponent<MeshRenderer>().sharedMaterial;
-        material.color = m_faceColour;
-        material.SetColor("_EmissiveColor", m_faceColour * 300.0f);
+        material.color = GameMode.m_EnviromentPrefab.m_colour;
+        material.SetColor("_EmissiveColor", GameMode.m_EnviromentPrefab.m_colour * 300.0f);
+    }
+
+    public void FractureShape()
+    {
+        Instantiate(m_rotatableMeshGameOverPrefab, transform.position, Quaternion.identity);
     }
 }
 

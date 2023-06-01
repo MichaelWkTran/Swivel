@@ -1,10 +1,8 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Rendering.HighDefinition;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
 public class GameMode : MonoBehaviour
 {
@@ -15,18 +13,31 @@ public class GameMode : MonoBehaviour
     [SerializeField] float m_minTime; //The fastest time a round can have
     public bool m_paused { get; private set; } = false; //Whether the game is currently paused
     RotatableMesh m_rotatableMesh;
-
     public static RotatableMesh m_rotatableMeshPrefab;
+    static SpriteGroup m_spriteGroupAsset;
+    public static SpriteGroup m_SpriteGroupAsset
+    {
+        get
+        {
+            if (m_spriteGroupAsset == null) m_spriteGroupAsset = (SpriteGroup)AssetDatabase.LoadAssetAtPath("Assets/Scenes/Level/Sprite Groups/Cats.asset", typeof(SpriteGroup));
+            return m_spriteGroupAsset;
+        }
+        set { m_spriteGroupAsset = value; }
+    }
     static Enviroment m_enviromentPrefab;
     public static Enviroment m_EnviromentPrefab
     {
-        get { return (m_enviromentPrefab != null) ? m_enviromentPrefab : (Enviroment)AssetDatabase.LoadAssetAtPath("Assets/Enviroments/Default Enviroment.prefab", typeof(Enviroment)); }
+        get
+        {
+            if (m_enviromentPrefab == null) m_enviromentPrefab = (Enviroment)AssetDatabase.LoadAssetAtPath("Assets/Enviroments/Default Enviroment.prefab", typeof(Enviroment));
+            return m_enviromentPrefab;
+        }
         set { m_enviromentPrefab = value; }
     }
+    [SerializeField] ParticleSystem m_deathParticles;
 
     [Header("UI")]
     [SerializeField] TMPro.TMP_Text m_scoreValueText; //The text that displays the current score of the game
-    [SerializeField] TMPro.TMP_Text m_roundValueText; //The text that displays the round the player is in
     public Image m_currentImage; //The image that shows what sprite on the rotatable mesh that the player has to match
     [SerializeField] Slider m_timerBar; //The UI that shows how much time is left
     [SerializeField] Gradient m_timerBarGradient; //The colour of the timer bar depending on how much time is left
@@ -36,21 +47,13 @@ public class GameMode : MonoBehaviour
 
     void Start()
     {
-        //
+        //Ensure that the game starts with proper time scale
         Time.timeScale = 1.0f;
 
-        //Setup Enviroment and Camera
+        //Setup Shape, Enviroment and Camera
         Enviroment enviroment = Instantiate(m_EnviromentPrefab);
         enviroment.SetEnviromentAndCamera();
-
-        //
-        if (m_rotatableMeshPrefab == null) m_rotatableMeshPrefab = (RotatableMesh)AssetDatabase.LoadAssetAtPath("Assets/Scenes/Level/Shapes/Cube.prefab", typeof(RotatableMesh));
         m_rotatableMesh = Instantiate(m_rotatableMeshPrefab);
-        m_rotatableMesh.m_faceColour = enviroment.m_colour;
-        m_rotatableMesh.SetColour();
-
-        //
-        m_roundValueText.text = m_round.ToString();
 
         //Randomise Image
         {
@@ -71,6 +74,8 @@ public class GameMode : MonoBehaviour
 
     void Update()
     {
+        if (!enabled) return;
+
         //Pause/Unpause the game
         if (Input.GetKeyDown(KeyCode.Escape)) if (!m_paused) Pause(); else UnPause();
 
@@ -90,6 +95,7 @@ public class GameMode : MonoBehaviour
 
     void OnApplicationPause(bool _pause)
     {
+        if (!enabled) return;
         if (!_pause) return;
 
         //Pause the game when the application is not in focus
@@ -104,24 +110,27 @@ public class GameMode : MonoBehaviour
 
     public void RandomizeImage()
     {
-        int selectedFaceIndex = Random.Range(0, m_rotatableMesh.m_FaceTextures.Length);
+        //Get the radomly selected silhouette from the rotable mesh
+        int selectedFaceIndex = UnityEngine.Random.Range(0, m_rotatableMesh.m_faceTextures.Length);
         if (m_rotatableMesh.m_targetFaceIndex == selectedFaceIndex)
         {
             selectedFaceIndex++;
-            if (m_rotatableMesh.m_FaceTextures.Length == selectedFaceIndex) selectedFaceIndex -= 2;
+            if (m_rotatableMesh.m_faceTextures.Length == selectedFaceIndex) selectedFaceIndex -= 2;
         }
-        m_currentImage.sprite = m_rotatableMesh.m_FaceTextures[selectedFaceIndex].sprite;
+        Sprite selectedSilhouette = m_rotatableMesh.m_faceTextures[selectedFaceIndex].sprite;
+
+        //Set the current sprite to the sprite corresponding with the silhouette of the face in sprite group
+        m_currentImage.sprite = m_SpriteGroupAsset.GetSpriteFromSilhouette(selectedSilhouette);
     }
 
     public void WinRound()
     {
         //Check whether the player can win this round
-        if (m_rotatableMesh.GetCurrentFace().sprite != m_currentImage.sprite) return;
+        if (m_rotatableMesh.GetCurrentFace().sprite != m_SpriteGroupAsset.GetSilhouetteFromSprite(m_currentImage.sprite)) return;
 
         //Update current round
         m_round++;
-        m_roundValueText.text = m_round.ToString();
-
+        
         //Randomise Image
         RandomizeImage();
 
@@ -140,13 +149,32 @@ public class GameMode : MonoBehaviour
         //Update Money
         //SaveSystem.m_data.m_money += m_score;
 
-        m_mainCanvas.gameObject.SetActive(false);
         m_gameOverCanvas.gameObject.SetActive(true);
+
+        var fff = m_deathParticles.main;
+        fff.startColor = m_EnviromentPrefab.m_colour;
+
+        var director = GetComponent<PlayableDirector>();
+        director.playableAsset = (PlayableAsset)AssetDatabase.LoadAssetAtPath("Assets/Game Over.playable", typeof(PlayableAsset));
+        foreach (var playableAssetOutput in director.playableAsset.outputs) switch (playableAssetOutput.streamName)
+        {
+            case "Rotatable Mesh Animation":  director.SetGenericBinding(playableAssetOutput.sourceObject, m_rotatableMesh.GetComponent<Animator>()); break;
+            case "Rotatable Mesh Activation": director.SetGenericBinding(playableAssetOutput.sourceObject, m_rotatableMesh.gameObject); break;
+        }
+        director.Play();
+
         enabled = false;
+    }
+
+    public void FractureShape()
+    {
+        m_rotatableMesh.FractureShape();
     }
 
     public void Pause()
     {
+        if (!enabled) return;
+
         m_paused = true;
         m_pauseCanvas.gameObject.SetActive(true);
         Time.timeScale = 0.0f;
@@ -154,6 +182,8 @@ public class GameMode : MonoBehaviour
 
     public void UnPause()
     {
+        if (!enabled) return;
+
         m_paused = false;
         m_pauseCanvas.gameObject.SetActive(false);
         Time.timeScale = 1.0f;

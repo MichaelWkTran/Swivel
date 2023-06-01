@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 4164133039159409078}
   - component: {fileID: 4164133039159409079}
   - component: {fileID: 4164133039159409096}
+  - component: {fileID: 6647014950517741838}
   m_Layer: 0
   m_Name: Pyramid
   m_TagString: Untagged
@@ -187,8 +188,30 @@ MonoBehaviour:
   m_dragSensitivity: 1
   m_snapSlerpFactor: 5
   m_isDragging: 0
-  m_faceColour: {r: 0.1745283, g: 1, b: 0.4313418, a: 1}
   m_faceTextureOffset: 0.01
+  m_rotatableMeshGameOverPrefab: {fileID: 8171494095283850113, guid: ab9ca50dd98f91f4cb9913d52c3d3e0b,
+    type: 3}
+--- !u!95 &6647014950517741838
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4164133039159409097}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4247302146954671715
 GameObject:
   m_ObjectHideFlags: 0
