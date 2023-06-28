@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Playables;
 
 public class GameMode : MonoBehaviour
 {
@@ -13,7 +12,16 @@ public class GameMode : MonoBehaviour
     [SerializeField] float m_minTime; //The fastest time a round can have
     public bool m_paused { get; private set; } = false; //Whether the game is currently paused
     RotatableMesh m_rotatableMesh;
-    public static RotatableMesh m_rotatableMeshPrefab;
+    static RotatableMesh m_rotatableMeshPrefab;
+    public static RotatableMesh m_RotatableMeshPrefab
+    {
+        get
+        {
+            if (m_rotatableMeshPrefab == null) m_rotatableMeshPrefab = (RotatableMesh)AssetDatabase.LoadAssetAtPath("Assets/Scenes/Level/Shapes/Cube.prefab", typeof(RotatableMesh));
+            return m_rotatableMeshPrefab;
+        }
+        set { m_rotatableMeshPrefab = value; }
+    }
     static SpriteGroup m_spriteGroupAsset;
     public static SpriteGroup m_SpriteGroupAsset
     {
@@ -34,7 +42,6 @@ public class GameMode : MonoBehaviour
         }
         set { m_enviromentPrefab = value; }
     }
-    [SerializeField] ParticleSystem m_deathParticles;
 
     [Header("UI")]
     [SerializeField] TMPro.TMP_Text m_scoreValueText; //The text that displays the current score of the game
@@ -53,7 +60,7 @@ public class GameMode : MonoBehaviour
         //Setup Shape, Enviroment and Camera
         Enviroment enviroment = Instantiate(m_EnviromentPrefab);
         enviroment.SetEnviromentAndCamera();
-        m_rotatableMesh = Instantiate(m_rotatableMeshPrefab);
+        m_rotatableMesh = Instantiate(m_RotatableMeshPrefab);
 
         //Randomise Image
         {
@@ -111,7 +118,7 @@ public class GameMode : MonoBehaviour
     public void RandomizeImage()
     {
         //Get the radomly selected silhouette from the rotable mesh
-        int selectedFaceIndex = UnityEngine.Random.Range(0, m_rotatableMesh.m_faceTextures.Length);
+        int selectedFaceIndex = Random.Range(0, m_rotatableMesh.m_faceTextures.Length);
         if (m_rotatableMesh.m_targetFaceIndex == selectedFaceIndex)
         {
             selectedFaceIndex++;
@@ -146,29 +153,17 @@ public class GameMode : MonoBehaviour
 
     public void GameOver()
     {
-        //Update Money
+        //Save Data
         //SaveSystem.m_data.m_money += m_score;
 
+        //Enable Game Over Canvas
         m_gameOverCanvas.gameObject.SetActive(true);
 
-        var fff = m_deathParticles.main;
-        fff.startColor = m_EnviromentPrefab.m_colour;
-
-        var director = GetComponent<PlayableDirector>();
-        director.playableAsset = (PlayableAsset)AssetDatabase.LoadAssetAtPath("Assets/Game Over.playable", typeof(PlayableAsset));
-        foreach (var playableAssetOutput in director.playableAsset.outputs) switch (playableAssetOutput.streamName)
-        {
-            case "Rotatable Mesh Animation":  director.SetGenericBinding(playableAssetOutput.sourceObject, m_rotatableMesh.GetComponent<Animator>()); break;
-            case "Rotatable Mesh Activation": director.SetGenericBinding(playableAssetOutput.sourceObject, m_rotatableMesh.gameObject); break;
-        }
-        director.Play();
-
+        //Enable GameOverTimeline Script
+        GetComponent<GameOverTimeline>().enabled = true;
+        
+        //Disable this script to disable gameplay
         enabled = false;
-    }
-
-    public void FractureShape()
-    {
-        m_rotatableMesh.FractureShape();
     }
 
     public void Pause()

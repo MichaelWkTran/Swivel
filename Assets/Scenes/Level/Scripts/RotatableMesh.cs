@@ -12,26 +12,33 @@ public class RotatableMesh : MonoBehaviour
     Vector2 m_currentMousePos;
     Vector2 m_prevMousePos;
     public int m_targetFaceIndex { get; private set; } = -1;
-
+    
     public SpriteRenderer[] m_faceTextures { get; private set; }
     public float m_faceTextureOffset = 0.01f;
 
+    //Rendering variables
+    float m_currentEmissiveIntensity;
+    public float m_emissiveIntensity;
+    Material m_material;
+
+    //Game Over Variables
     [SerializeField] RotatableMeshGameOver m_rotatableMeshGameOverPrefab;
     public RotatableMeshGameOver m_RotatableMeshGameOverPrefab { get { return m_rotatableMeshGameOverPrefab; } }
 
     void Start()
     {
-        SetColour();
+        m_material = GetComponent<MeshRenderer>().sharedMaterial;
+        m_material.color = GameMode.m_EnviromentPrefab.m_colour;
 
         //Select Random Image from m_SpriteGroupAsset
-        //var avalibleSprites = new List<Sprite>(GameMode.m_SpriteGroupAsset.m_silhouetteSprites);
+        var avalibleSprites = new List<Sprite>(GameMode.m_SpriteGroupAsset.m_silhouetteSprites);
         m_faceTextures = GetComponentsInChildren<SpriteRenderer>(true);
-        //for (int i = 0; i < m_faceTextures.Length; i++)
-        //{
-        //    int spriteIndex = Random.Range(0, avalibleSprites.Count);
-        //    m_faceTextures[i].sprite = avalibleSprites[spriteIndex];
-        //    avalibleSprites.RemoveAt(spriteIndex);
-        //}
+        for (int i = 0; i < m_faceTextures.Length; i++)
+        {
+            int spriteIndex = Random.Range(0, avalibleSprites.Count);
+            m_faceTextures[i].sprite = avalibleSprites[spriteIndex];
+            avalibleSprites.RemoveAt(spriteIndex);
+        }
 
         //For debugging, select sequencial image from m_SpriteGroupAsset
         //for (int i = 0; i < m_faceTextures.Length; i++) m_faceTextures[i].sprite = avalibleSprites[i];
@@ -39,6 +46,9 @@ public class RotatableMesh : MonoBehaviour
 
     void Update()
     {
+        m_material.SetColor("_EmissionColor", m_material.color * m_emissiveIntensity);
+        
+        //Dont execute if the game is paused
         if (Time.deltaTime <= 0.0f) return;
 
         //Rotate the mesh with the mouse
@@ -129,13 +139,6 @@ public class RotatableMesh : MonoBehaviour
     public SpriteRenderer GetCurrentFace()
     {
         return m_faceTextures[m_targetFaceIndex];
-    }
-
-    public void SetColour()
-    {
-        Material material = GetComponent<MeshRenderer>().sharedMaterial;
-        material.color = GameMode.m_EnviromentPrefab.m_colour;
-        material.SetColor("_EmissiveColor", GameMode.m_EnviromentPrefab.m_colour * 300.0f);
     }
 
     public void FractureShape()

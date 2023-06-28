@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 7135777584996857703}
   m_LocalRotation: {x: -0.5847106, y: -0, z: -0, w: 0.81124204}
   m_LocalPosition: {x: -0.00000028312206, y: -0.20193797, z: -0.29183877}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7135777586098338410}
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7135777585093320951
@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 7135777585093320951}
   m_LocalRotation: {x: 0.13845204, y: -0.79934007, z: 0.2016436, w: 0.548841}
   m_LocalPosition: {x: 0.17488222, y: 0.1009689, z: 0.29183927}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7135777586098338410}
@@ -165,7 +165,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7135777585542025062
@@ -194,7 +194,7 @@ Transform:
   m_GameObject: {fileID: 7135777585542025062}
   m_LocalRotation: {x: 0.2016436, y: -0.5488411, z: 0.1384521, w: 0.79933995}
   m_LocalPosition: {x: 0.17488223, y: 0.1009689, z: -0.29183856}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7135777586098338410}
@@ -249,7 +249,7 @@ SpriteRenderer:
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7135777585700132730
@@ -278,7 +278,7 @@ Transform:
   m_GameObject: {fileID: 7135777585700132730}
   m_LocalRotation: {x: 0, y: 0.8112421, z: 0.5847104, w: -0}
   m_LocalPosition: {x: -0.00000028312206, y: -0.20193797, z: 0.2918391}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7135777586098338410}
@@ -333,7 +333,7 @@ SpriteRenderer:
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7135777585960461415
@@ -362,7 +362,7 @@ Transform:
   m_GameObject: {fileID: 7135777585960461415}
   m_LocalRotation: {x: 0.20164369, y: 0.54884106, z: -0.13845214, w: 0.79933995}
   m_LocalPosition: {x: -0.17488278, y: 0.10096892, z: -0.29183874}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7135777586098338410}
@@ -417,7 +417,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7135777586098338326
@@ -527,6 +527,7 @@ MonoBehaviour:
   m_snapSlerpFactor: 5
   m_isDragging: 0
   m_faceTextureOffset: 0.01
+  m_emissiveIntensity: 0
   m_rotatableMeshGameOverPrefab: {fileID: 8171494095283850113, guid: ab9ca50dd98f91f4cb9913d52c3d3e0b,
     type: 3}
 --- !u!95 &8095714983827437540
@@ -576,7 +577,7 @@ Transform:
   m_GameObject: {fileID: 7135777586632174147}
   m_LocalRotation: {x: 0.138452, y: 0.79934007, z: -0.20164353, w: 0.548841}
   m_LocalPosition: {x: -0.1748828, y: 0.10096892, z: 0.29183912}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7135777586098338410}
@@ -631,6 +632,6 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

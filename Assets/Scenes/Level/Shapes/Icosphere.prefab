@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1009911341859561425}
   m_LocalRotation: {x: -0.02789608, y: 0.958044, z: -0.26714224, w: -0.100042865}
   m_LocalPosition: {x: 0.08510166, y: 0.27484593, z: 0.32411084}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1141905584110867879
@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 1141905584110867879}
   m_LocalRotation: {x: 0.1771333, y: 0.7581014, z: -0.22994898, w: 0.5839774}
   m_LocalPosition: {x: -0.361043, y: 0.27522677, z: 0.07665771}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -165,7 +165,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1570953687764948513
@@ -194,7 +194,7 @@ Transform:
   m_GameObject: {fileID: 1570953687764948513}
   m_LocalRotation: {x: -0.1555165, y: -0.24657217, z: -0.04012254, w: 0.9557233}
   m_LocalPosition: {x: 0.2227564, y: -0.16983713, z: -0.32403865}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -249,7 +249,7 @@ SpriteRenderer:
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2536157848865047378
@@ -278,7 +278,7 @@ Transform:
   m_GameObject: {fileID: 2536157848865047378}
   m_LocalRotation: {x: 0.04012254, y: 0.9557233, z: -0.1555165, w: 0.24657217}
   m_LocalPosition: {x: -0.2227564, y: 0.16983713, z: 0.32403865}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -333,7 +333,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &3006781081059383098
@@ -362,7 +362,7 @@ Transform:
   m_GameObject: {fileID: 3006781081059383098}
   m_LocalRotation: {x: 0.26714224, y: 0.10004285, z: -0.02789607, w: 0.958044}
   m_LocalPosition: {x: -0.08510166, y: 0.27484593, z: -0.32411084}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -417,7 +417,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &3019185131724755707
@@ -446,7 +446,7 @@ Transform:
   m_GameObject: {fileID: 3019185131724755707}
   m_LocalRotation: {x: -0.25789315, y: 0.73654526, z: -0.49166223, w: -0.38634244}
   m_LocalPosition: {x: 0.13799047, y: 0.44557342, z: 0.07671599}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -501,7 +501,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &3276763860587047501
@@ -530,7 +530,7 @@ Transform:
   m_GameObject: {fileID: 3276763860587047501}
   m_LocalRotation: {x: 0.027896067, y: 0.958044, z: 0.26714224, w: -0.100042835}
   m_LocalPosition: {x: 0.08510166, y: -0.27484593, z: 0.32411084}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -585,7 +585,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &4164133039159409097
@@ -709,6 +709,7 @@ MonoBehaviour:
   m_snapSlerpFactor: 5
   m_isDragging: 0
   m_faceTextureOffset: 0.01
+  m_emissiveIntensity: 0
   m_rotatableMeshGameOverPrefab: {fileID: 8171494095283850113, guid: ab9ca50dd98f91f4cb9913d52c3d3e0b,
     type: 3}
 --- !u!95 &5648715682140418352
@@ -758,7 +759,7 @@ Transform:
   m_GameObject: {fileID: 4247302146954671715}
   m_LocalRotation: {x: 0.1555165, y: -0.24657217, z: 0.04012254, w: 0.9557233}
   m_LocalPosition: {x: 0.2227564, y: 0.16983713, z: -0.32403865}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -813,7 +814,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &4404957568667172055
@@ -842,7 +843,7 @@ Transform:
   m_GameObject: {fileID: 4404957568667172055}
   m_LocalRotation: {x: 0, y: -0.7774392, z: 0, w: 0.6289581}
   m_LocalPosition: {x: 0.44611666, y: 0, z: 0.076624066}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -897,7 +898,7 @@ SpriteRenderer:
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5247257129608852590
@@ -926,7 +927,7 @@ Transform:
   m_GameObject: {fileID: 5247257129608852590}
   m_LocalRotation: {x: -0.04012254, y: 0.9557233, z: 0.1555165, w: 0.24657217}
   m_LocalPosition: {x: -0.2227564, y: -0.16983713, z: 0.32403865}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -981,7 +982,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5886130890137836081
@@ -1010,7 +1011,7 @@ Transform:
   m_GameObject: {fileID: 5886130890137836081}
   m_LocalRotation: {x: 0.49166223, y: 0.38634244, z: -0.25789315, w: 0.73654526}
   m_LocalPosition: {x: -0.13799047, y: 0.44557342, z: -0.07671599}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -1065,7 +1066,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5915038024255102299
@@ -1094,7 +1095,7 @@ Transform:
   m_GameObject: {fileID: 5915038024255102299}
   m_LocalRotation: {x: 0.25789315, y: 0.73654526, z: 0.49166223, w: -0.38634244}
   m_LocalPosition: {x: 0.13799047, y: -0.44557342, z: 0.07671599}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -1149,7 +1150,7 @@ SpriteRenderer:
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5945985522417866671
@@ -1178,7 +1179,7 @@ Transform:
   m_GameObject: {fileID: 5945985522417866671}
   m_LocalRotation: {x: 0, y: 0.62895805, z: 0, w: 0.7774393}
   m_LocalPosition: {x: -0.44611666, y: 0, z: -0.076624066}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -1233,7 +1234,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6591799760139852446
@@ -1262,7 +1263,7 @@ Transform:
   m_GameObject: {fileID: 6591799760139852446}
   m_LocalRotation: {x: 0, y: 0.9554223, z: -0, w: -0.29524285}
   m_LocalPosition: {x: 0.2753121, y: 0, z: 0.32399496}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -1317,7 +1318,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7177282875985866180
@@ -1346,7 +1347,7 @@ Transform:
   m_GameObject: {fileID: 7177282875985866180}
   m_LocalRotation: {x: 0, y: 0.29524285, z: 0, w: 0.9554223}
   m_LocalPosition: {x: -0.2753121, y: 0, z: -0.32399496}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -1401,7 +1402,7 @@ SpriteRenderer:
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7785675925720052814
@@ -1430,7 +1431,7 @@ Transform:
   m_GameObject: {fileID: 7785675925720052814}
   m_LocalRotation: {x: 0.22994897, y: -0.5839774, z: 0.17713332, w: 0.75810134}
   m_LocalPosition: {x: 0.361043, y: 0.27522677, z: -0.07665771}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -1485,7 +1486,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8628965385474849509
@@ -1514,7 +1515,7 @@ Transform:
   m_GameObject: {fileID: 8628965385474849509}
   m_LocalRotation: {x: -0.49166223, y: 0.38634244, z: 0.25789315, w: 0.73654526}
   m_LocalPosition: {x: -0.13799047, y: -0.44557342, z: -0.07671599}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -1569,7 +1570,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8637464465587815956
@@ -1598,7 +1599,7 @@ Transform:
   m_GameObject: {fileID: 8637464465587815956}
   m_LocalRotation: {x: -0.1771333, y: 0.7581014, z: 0.22994898, w: 0.5839774}
   m_LocalPosition: {x: -0.361043, y: -0.27522677, z: 0.07665771}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -1653,7 +1654,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8977938693625320184
@@ -1682,7 +1683,7 @@ Transform:
   m_GameObject: {fileID: 8977938693625320184}
   m_LocalRotation: {x: -0.22994897, y: -0.5839774, z: -0.1771333, w: 0.7581014}
   m_LocalPosition: {x: 0.361043, y: -0.27522677, z: -0.07665771}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -1737,7 +1738,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &9001893867201017937
@@ -1766,7 +1767,7 @@ Transform:
   m_GameObject: {fileID: 9001893867201017937}
   m_LocalRotation: {x: -0.26714224, y: 0.10004285, z: 0.02789607, w: 0.958044}
   m_LocalPosition: {x: -0.08510166, y: -0.27484593, z: -0.32411084}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164133039159409077}
@@ -1821,6 +1822,6 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

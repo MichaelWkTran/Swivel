@@ -6,7 +6,7 @@ public class LevelButton : MonoBehaviour
 
     public void LoadLevel()
     {
-        GameMode.m_rotatableMeshPrefab = m_rotatableMeshPrefab;
+        GameMode.m_RotatableMeshPrefab = m_rotatableMeshPrefab;
         GetComponent<ChangeScene>().LoadScene("Level");
     }
 }
