@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4619658238915058850}
   - component: {fileID: 6898634008789396086}
   m_Layer: 0
-  m_Name: Default Enviroment - Copy
+  m_Name: Default Enviroment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_colour: {r: 0, g: 1, b: 0.034326077, a: 1}
+  m_skyboxMaterial: {fileID: 2100000, guid: 2a8ff1e8d6b717042882461b758f9a35, type: 2}
   m_bloomIntensity: 0
 --- !u!114 &4619658238915058850
 MonoBehaviour:

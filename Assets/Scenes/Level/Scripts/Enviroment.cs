@@ -6,9 +6,9 @@ using UnityEngine.Rendering.Universal;
 public class Enviroment : MonoBehaviour
 {
     public Color m_colour;
-    public float m_bloomIntensity;
+    public Material m_skyboxMaterial;
     
-    public void SetEnviromentAndCamera()
+    public void Start()
     {
         //Destroy current camera
         GameObject mainCameraGameObject = Camera.main.gameObject;
@@ -16,13 +16,8 @@ public class Enviroment : MonoBehaviour
         //Copy camera from enviroment to main camera and destroy it from the enviroment
         Camera enviromentCamera = GetComponent<Camera>();
         ComponentUtils.CopyComponent(enviromentCamera, mainCameraGameObject);
-    }
 
-    public void ResetBloomIntensity()
-    {
-        Volume volume = GetComponent<Volume>();
-        Bloom bloom; if (!volume.profile.TryGet(out bloom)) return;
-
-        bloom.intensity.value = m_bloomIntensity;
+        //Set skybox material
+        RenderSettings.skybox = m_skyboxMaterial;
     }
 }

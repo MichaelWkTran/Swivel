@@ -59,7 +59,6 @@ public class GameMode : MonoBehaviour
 
         //Setup Shape, Enviroment and Camera
         Enviroment enviroment = Instantiate(m_EnviromentPrefab);
-        enviroment.SetEnviromentAndCamera();
         m_rotatableMesh = Instantiate(m_RotatableMeshPrefab);
 
         //Randomise Image
