@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.UI;
 
 public class GameMode : MonoBehaviour
@@ -11,9 +12,11 @@ public class GameMode : MonoBehaviour
     [SerializeField] float m_timeDecreaseRate; //How much max time is taken away evey time a round is completed
     [SerializeField] float m_minTime; //The fastest time a round can have
     public bool m_paused { get; private set; } = false; //Whether the game is currently paused
-    RotatableMesh m_rotatableMesh;
-    static RotatableMesh m_rotatableMeshPrefab;
-    public static RotatableMesh m_RotatableMeshPrefab
+    RotatableMesh m_rotatableMesh; //The rotatable mesh that the player interacts with
+    GameUI m_gameUI; //Where all the UI elements are stored
+
+    [Header("Static Prefabs")]
+    static RotatableMesh m_rotatableMeshPrefab; public static RotatableMesh m_RotatableMeshPrefab
     {
         get
         {
@@ -22,8 +25,7 @@ public class GameMode : MonoBehaviour
         }
         set { m_rotatableMeshPrefab = value; }
     }
-    static SpriteGroup m_spriteGroupAsset;
-    public static SpriteGroup m_SpriteGroupAsset
+    static SpriteGroup m_spriteGroupAsset; public static SpriteGroup m_SpriteGroupAsset
     {
         get
         {
@@ -32,8 +34,7 @@ public class GameMode : MonoBehaviour
         }
         set { m_spriteGroupAsset = value; }
     }
-    static Enviroment m_enviromentPrefab;
-    public static Enviroment m_EnviromentPrefab
+    static Enviroment m_enviromentPrefab; public static Enviroment m_EnviromentPrefab
     {
         get
         {
@@ -42,24 +43,26 @@ public class GameMode : MonoBehaviour
         }
         set { m_enviromentPrefab = value; }
     }
+    static GameUI m_uiPrefab; public static GameUI m_UIPrefab
+    {
+        get
+        {
+            if (m_uiPrefab == null) m_uiPrefab = (GameUI)AssetDatabase.LoadAssetAtPath("Assets/Scenes/Level/UI Themes/Default.prefab", typeof(GameUI));
+            return m_uiPrefab;
+        }
+        set { m_uiPrefab = value; }
+    }
 
-    [Header("UI")]
-    [SerializeField] TMPro.TMP_Text m_scoreValueText; //The text that displays the current score of the game
-    public Image m_currentImage; //The image that shows what sprite on the rotatable mesh that the player has to match
-    [SerializeField] Slider m_timerBar; //The UI that shows how much time is left
-    [SerializeField] Gradient m_timerBarGradient; //The colour of the timer bar depending on how much time is left
-    [SerializeField] Canvas m_mainCanvas; //The canvas that shows the main UI
-    [SerializeField] Canvas m_gameOverCanvas; //The canvas that shows the game over screen
-    [SerializeField] Canvas m_pauseCanvas; //The canvas that shows the pause screen
 
     void Start()
     {
         //Ensure that the game starts with proper time scale
         Time.timeScale = 1.0f;
 
-        //Setup Shape, Enviroment and Camera
+        //Setup Shape, Enviroment, and UI
         Enviroment enviroment = Instantiate(m_EnviromentPrefab);
         m_rotatableMesh = Instantiate(m_RotatableMeshPrefab);
+        m_gameUI = Instantiate(m_UIPrefab); m_gameUI.transform.parent = transform; m_gameUI.gameObject.name = "UI";
 
         //Randomise Image
         {
@@ -73,9 +76,12 @@ public class GameMode : MonoBehaviour
             }
             StartCoroutine(Coroutine());
         }
-        
+
         //Setup timer
-        m_timerBar.value = m_timerBar.maxValue = m_startTime;
+        m_gameUI.m_timerBar.value = m_gameUI.m_timerBar.maxValue = m_startTime;
+
+        //Start Director
+        GetComponent<PlayableDirector>().Play();
     }
 
     void Update()
@@ -90,13 +96,13 @@ public class GameMode : MonoBehaviour
 
         //Dont update when the player hasn't finished their first round
         if (m_round == 1) return;
-        
+
         //Update Timer
-        m_timerBar.value -= Time.deltaTime;
-        m_timerBar.fillRect.GetComponent<Image>().color = m_timerBarGradient.Evaluate(m_timerBar.value / m_timerBar.maxValue);
+        m_gameUI.m_timerBar.value -= Time.deltaTime;
+        m_gameUI.m_timerBar.fillRect.GetComponent<Image>().color = m_gameUI.m_timerBarGradient.Evaluate(m_gameUI.m_timerBar.value / m_gameUI.m_timerBar.maxValue);
 
         //Trigger Game Over when the timer runs out
-        if (m_timerBar.value <= 0.0f) GameOver();
+        if (m_gameUI.m_timerBar.value <= 0.0f) GameOver();
     }
 
     void OnApplicationPause(bool _pause)
@@ -126,13 +132,13 @@ public class GameMode : MonoBehaviour
         Sprite selectedSilhouette = m_rotatableMesh.m_faceTextures[selectedFaceIndex].sprite;
 
         //Set the current sprite to the sprite corresponding with the silhouette of the face in sprite group
-        m_currentImage.sprite = m_SpriteGroupAsset.GetSpriteFromSilhouette(selectedSilhouette);
+        m_gameUI.m_currentImage.sprite = m_SpriteGroupAsset.GetSpriteFromSilhouette(selectedSilhouette);
     }
 
     public void WinRound()
     {
         //Check whether the player can win this round
-        if (m_rotatableMesh.GetCurrentFace().sprite != m_SpriteGroupAsset.GetSilhouetteFromSprite(m_currentImage.sprite)) return;
+        if (m_rotatableMesh.GetCurrentFace().sprite != m_SpriteGroupAsset.GetSilhouetteFromSprite(m_gameUI.m_currentImage.sprite)) return;
 
         //Update current round
         m_round++;
@@ -141,13 +147,13 @@ public class GameMode : MonoBehaviour
         RandomizeImage();
 
         //Add Score
-        m_score += Mathf.Round((m_timerBar.value / m_timerBar.maxValue) * 100.0f) * 10.0f;
-        m_scoreValueText.text = m_score.ToString();
+        m_score += Mathf.Round((m_gameUI.m_timerBar.value / m_gameUI.m_timerBar.maxValue) * 100.0f) * 10.0f;
+        m_gameUI.m_scoreValueText.text = m_score.ToString();
 
         //Reset Timer
-        m_timerBar.maxValue -= m_timeDecreaseRate;
-        if (m_timerBar.maxValue < m_minTime) m_timerBar.maxValue = m_minTime;
-        m_timerBar.value = m_timerBar.maxValue;
+        m_gameUI.m_timerBar.maxValue -= m_timeDecreaseRate;
+        if (m_gameUI.m_timerBar.maxValue < m_minTime) m_gameUI.m_timerBar.maxValue = m_minTime;
+        m_gameUI.m_timerBar.value = m_gameUI.m_timerBar.maxValue;
     }
 
     public void GameOver()
@@ -156,7 +162,7 @@ public class GameMode : MonoBehaviour
         //SaveSystem.m_data.m_money += m_score;
 
         //Enable Game Over Canvas
-        m_gameOverCanvas.gameObject.SetActive(true);
+        m_gameUI.m_gameOverCanvas.gameObject.SetActive(true);
 
         //Enable GameOverTimeline Script
         GetComponent<GameOverTimeline>().enabled = true;
@@ -170,7 +176,7 @@ public class GameMode : MonoBehaviour
         if (!enabled) return;
 
         m_paused = true;
-        m_pauseCanvas.gameObject.SetActive(true);
+        m_gameUI.m_pauseCanvas.gameObject.SetActive(true);
         Time.timeScale = 0.0f;
     }
 
@@ -179,7 +185,7 @@ public class GameMode : MonoBehaviour
         if (!enabled) return;
 
         m_paused = false;
-        m_pauseCanvas.gameObject.SetActive(false);
+        m_gameUI.m_pauseCanvas.gameObject.SetActive(false);
         Time.timeScale = 1.0f;
     }
 
