@@ -13,13 +13,25 @@ public class GameUI : MonoBehaviour
     public Slider m_timerBar; //The UI that shows how much time is left
     public Gradient m_timerBarGradient; //The colour of the timer bar depending on how much time is left
 
+    GameMode m_gameMode;
+
     void Start()
     {
-        
+        m_gameMode = FindObjectOfType<GameMode>();
     }
 
-    void Update()
+    public void OnPauseButtonClick()
     {
-        
+        m_gameMode.Pause();
+    }
+
+    public void OnResumeButtonClick()
+    {
+        m_gameMode.UnPause();
+    }
+
+    public void OnShareButtonClick()
+    {
+        m_gameMode.ShareHighScore();
     }
 }

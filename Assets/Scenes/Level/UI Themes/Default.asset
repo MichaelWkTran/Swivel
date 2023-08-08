@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 255218140d0f7d94ca729c6948ef191d, type: 3}
-  m_Name: Defaukt
+  m_Name: Default
   m_EditorClassIdentifier: 
   m_font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontScale: 0

@@ -11,6 +11,11 @@ public class LevelSelect : MonoBehaviour
     [SerializeField] Slider m_musicVolumeSlider;
     [SerializeField] TMPro.TMP_Dropdown m_graphicsDropdown;
 
+    [Header("Shop Screen")]
+    [SerializeField] ScrollRect m_shopScrollRect;
+    [SerializeField] Transform m_shopContents;
+
+
     void Start()
     {
         Time.timeScale = 1.0f;
@@ -43,6 +48,17 @@ public class LevelSelect : MonoBehaviour
     public void StartGame()
     {
 
+    }
+    #endregion
+
+    #region Shop Menu
+    public void TabsOnToggle(RectTransform _toggledContent)
+    {
+        foreach(Transform child in m_shopContents) child.gameObject.SetActive(false);
+
+        if (_toggledContent == null) return;
+        _toggledContent.gameObject.SetActive(true);
+        m_shopScrollRect.content = _toggledContent;
     }
     #endregion
 

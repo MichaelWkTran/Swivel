@@ -167,9 +167,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameMode, Assembly-CSharp
-        m_MethodName: ShareHighScore
+      - m_Target: {fileID: 7649672582750487600}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: OnShareButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -240,6 +240,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -315,7 +316,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8174749039453010394
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +328,6 @@ GameObject:
   - component: {fileID: 8174749039453010398}
   - component: {fileID: 8174749039453010399}
   - component: {fileID: 8174749039453010392}
-  - component: {fileID: 8174749039453010397}
   m_Layer: 5
   m_Name: Title Button
   m_TagString: Untagged
@@ -438,7 +437,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8174749039453010397}
+      - m_Target: {fileID: 227879900044074302}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -450,20 +449,6 @@ MonoBehaviour:
           m_StringArgument: Level Select
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8174749039453010397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8174749039453010394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e599d595d9f2c42b8b5cc238858177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_sceneTransitionPrefab: {fileID: 714051754607539685, guid: 89487b1575e6f124aa10e92a34776f0a,
-    type: 3}
 --- !u!1 &8174749039484711692
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +726,6 @@ GameObject:
   - component: {fileID: 8174749039764505659}
   - component: {fileID: 8174749039764505636}
   - component: {fileID: 8174749039764505637}
-  - component: {fileID: 8174749039764505638}
   m_Layer: 5
   m_Name: Title Button
   m_TagString: Untagged
@@ -851,7 +835,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8174749039764505638}
+      - m_Target: {fileID: 227879900044074302}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -863,20 +847,6 @@ MonoBehaviour:
           m_StringArgument: Level Select
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8174749039764505638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8174749039764505632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e599d595d9f2c42b8b5cc238858177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_sceneTransitionPrefab: {fileID: 714051754607539685, guid: 89487b1575e6f124aa10e92a34776f0a,
-    type: 3}
 --- !u!1 &8174749039966547942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,7 +1315,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8174749040343702070}
+      - m_Target: {fileID: 227879900044074302}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -1572,6 +1542,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1627,7 +1598,6 @@ GameObject:
   - component: {fileID: 8174749040809968959}
   - component: {fileID: 8174749040809968952}
   - component: {fileID: 8174749040809968953}
-  - component: {fileID: 8174749040809968958}
   m_Layer: 5
   m_Name: Restart Button
   m_TagString: Untagged
@@ -1737,7 +1707,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 227879900044074302}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -1749,20 +1719,6 @@ MonoBehaviour:
           m_StringArgument: Level
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8174749040809968958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8174749040809968955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e599d595d9f2c42b8b5cc238858177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_sceneTransitionPrefab: {fileID: 714051754607539685, guid: 89487b1575e6f124aa10e92a34776f0a,
-    type: 3}
 --- !u!1 &8174749040944629073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,9 +1840,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameMode, Assembly-CSharp
-        m_MethodName: Pause
+      - m_Target: {fileID: 7649672582750487600}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: OnPauseButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1957,6 +1913,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2101,7 +2058,6 @@ GameObject:
   - component: {fileID: 8174749041094812391}
   - component: {fileID: 8174749041094812384}
   - component: {fileID: 8174749041094812385}
-  - component: {fileID: 8174749041094812386}
   m_Layer: 5
   m_Name: Resume Button
   m_TagString: Untagged
@@ -2211,9 +2167,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameMode, Assembly-CSharp
-        m_MethodName: UnPause
+      - m_Target: {fileID: 7649672582750487600}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: OnResumeButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2223,20 +2179,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8174749041094812386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8174749041094812396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e599d595d9f2c42b8b5cc238858177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_sceneTransitionPrefab: {fileID: 714051754607539685, guid: 89487b1575e6f124aa10e92a34776f0a,
-    type: 3}
 --- !u!1 &8174749041107249513
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,6 +2189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8174749041107249512}
   - component: {fileID: 7649672582750487600}
+  - component: {fileID: 227879900044074302}
   m_Layer: 0
   m_Name: Default
   m_TagString: Untagged
@@ -2317,8 +2260,23 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
+    m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+--- !u!114 &227879900044074302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174749041107249513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e599d595d9f2c42b8b5cc238858177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_sceneTransitionPrefab: {fileID: 714051754607539685, guid: 89487b1575e6f124aa10e92a34776f0a,
+    type: 3}
 --- !u!1 &8174749041133150473
 GameObject:
   m_ObjectHideFlags: 0
