@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Collections.Generic;
 
 //Note that this system is only loading and saving data to m_data and does not interact with external information
 public static class SaveSystem
@@ -10,11 +11,17 @@ public static class SaveSystem
 
     [Serializable] public class SaveData
     {
+        public SaveData() { Load(); }
+
         //Game Variables
         public float m_money;
 
-        public string m_currentSkinName;
-        public string m_currentHatName;
+        public string m_currentBackgroundGUID;
+        public string m_currentUIThemeGUID;
+        
+        public uint m_unlockedLevels;
+        List<string> m_unlockedBackgroundGUIDs;
+        List<string> m_unlockedUIThemeGUIDs;
 
         //Settings
         public float m_sfxVolume;

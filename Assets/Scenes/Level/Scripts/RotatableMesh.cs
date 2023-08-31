@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class RotatableMesh : MonoBehaviour
 {
-    [SerializeField] float m_dragSensitivity = 1.0f;
-    [SerializeField] float m_snapSlerpFactor = 1.0f;
+    static float m_dragSensitivity = 2.0f;
+    static float m_snapSlerpFactor = 5.0f;
     public bool m_isDragging = false;
 
     Vector2 m_currentMousePos;

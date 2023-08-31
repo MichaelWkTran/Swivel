@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 255218140d0f7d94ca729c6948ef191d, type: 3}
   m_Name: Default
   m_EditorClassIdentifier: 
+  m_ID: e2a732bb-fd80-42bc-a427-b9a373dfdf1d
   m_font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontScale: 0
   m_currentImageBorder: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
@@ -42,5 +43,6 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
+    m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2

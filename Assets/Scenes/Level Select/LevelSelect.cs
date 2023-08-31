@@ -5,23 +5,23 @@ public class LevelSelect : MonoBehaviour
 {
     static bool m_isApplicationStarted = true;
 
+    [Header("Level Select Screen")]
+    [HideInInspector] public LevelButton[] m_LevelButtons;
+
     [Header("Settings Screen")]
     [SerializeField] UnityEngine.Audio.AudioMixer m_audioMixer;
     [SerializeField] Slider m_sfxVolumeSlider;
     [SerializeField] Slider m_musicVolumeSlider;
     [SerializeField] TMPro.TMP_Dropdown m_graphicsDropdown;
 
-    [Header("Shop Screen")]
-    [SerializeField] ScrollRect m_shopScrollRect;
-    [SerializeField] Transform m_shopContents;
-
 
     void Start()
     {
         Time.timeScale = 1.0f;
 
-        Instantiate(GameMode.m_EnviromentPrefab);
-
+        //Update Enviroment
+        UpdateEnviroment(GameMode.m_EnviromentPrefab);
+        
         //Set settings in settings menu
         if (m_isApplicationStarted)
         {
@@ -44,6 +44,34 @@ public class LevelSelect : MonoBehaviour
         m_graphicsDropdown.value = QualitySettings.GetQualityLevel();
     }
 
+    public void UpdateEnviroment(Enviroment _newEnviromentPrefab)
+    {
+        //Destroy existing enviroments in the world
+        var enviroments = FindObjectsOfType<Enviroment>();
+        foreach (Enviroment enviroment in enviroments) Destroy(enviroment.gameObject);
+
+        //Set Background
+        GameMode.m_EnviromentPrefab = _newEnviromentPrefab;
+        Instantiate(GameMode.m_EnviromentPrefab);
+
+        //Set Level buttons
+        m_LevelButtons = FindObjectsOfType<LevelButton>(true);
+        foreach (var levelButton in m_LevelButtons)
+        {
+            Color enviromentColour = GameMode.m_EnviromentPrefab.m_colour;
+            levelButton.ShapeImage.color = enviromentColour;
+
+            Vector3 backgroundHSV;
+            Color.RGBToHSV(enviromentColour, out backgroundHSV.x, out backgroundHSV.y, out backgroundHSV.z);
+            backgroundHSV.x = Mathf.Repeat(backgroundHSV.x + 0.15f, 1.0f);
+            backgroundHSV.y -= 0.6f;
+            enviromentColour = Color.HSVToRGB(backgroundHSV.x, backgroundHSV.y, backgroundHSV.z);
+
+
+            levelButton.GetComponent<Image>().color = enviromentColour;
+        }
+    }
+
     #region Title Menu
     public void StartGame()
     {
@@ -52,14 +80,7 @@ public class LevelSelect : MonoBehaviour
     #endregion
 
     #region Shop Menu
-    public void TabsOnToggle(RectTransform _toggledContent)
-    {
-        foreach(Transform child in m_shopContents) child.gameObject.SetActive(false);
-
-        if (_toggledContent == null) return;
-        _toggledContent.gameObject.SetActive(true);
-        m_shopScrollRect.content = _toggledContent;
-    }
+    
     #endregion
 
     #region Settings Menu

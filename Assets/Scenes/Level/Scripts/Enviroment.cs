@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-[RequireComponent(typeof(Camera), typeof(Volume))]
+[RequireComponent(typeof(Camera), typeof(Volume), typeof(MonoBehaviourID))]
 public class Enviroment : MonoBehaviour
 {
     public Color m_colour;
