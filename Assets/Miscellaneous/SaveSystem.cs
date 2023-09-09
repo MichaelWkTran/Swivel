@@ -16,12 +16,12 @@ public static class SaveSystem
         //Game Variables
         public float m_money;
 
-        public string m_currentBackgroundGUID;
+        public string m_currentEnviromentGUID;
         public string m_currentUIThemeGUID;
         
         public uint m_unlockedLevels;
-        List<string> m_unlockedBackgroundGUIDs;
-        List<string> m_unlockedUIThemeGUIDs;
+        public List<string> m_unlockedEnviromentGUIDs;
+        public List<string> m_unlockedUIThemeGUIDs;
 
         //Settings
         public float m_sfxVolume;

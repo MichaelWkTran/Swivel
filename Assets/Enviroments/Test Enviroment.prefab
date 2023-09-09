@@ -99,6 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992997a709af8474288e196f490640af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ID: bc24de95-7a3e-45e1-bd02-489f240164bd
+  m_initialID: bc24de95-7a3e-45e1-bd02-489f240164bd
+  m_guidGroup: {fileID: 11400000, guid: 84dd66b979f085446aa6913e49697527, type: 2}
   m_colour: {r: 1, g: 0.17771798, b: 0, a: 1}
   m_skyboxMaterial: {fileID: 2100000, guid: 2a8ff1e8d6b717042882461b758f9a35, type: 2}
 --- !u!114 &4619658238915058850

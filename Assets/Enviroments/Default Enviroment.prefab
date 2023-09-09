@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4177303811406319376}
   - component: {fileID: 4619658238915058850}
   - component: {fileID: 6898634008789396086}
-  - component: {fileID: 5632553718283017398}
   m_Layer: 0
   m_Name: Default Enviroment
   m_TagString: Untagged
@@ -101,6 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992997a709af8474288e196f490640af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ID: 1166d3ac-9132-42bc-9bc5-9a3465b73f7b
+  m_initialID: 1166d3ac-9132-42bc-9bc5-9a3465b73f7b
+  m_guidGroup: {fileID: 11400000, guid: 84dd66b979f085446aa6913e49697527, type: 2}
   m_colour: {r: 0, g: 1, b: 0.034326077, a: 1}
   m_skyboxMaterial: {fileID: 2100000, guid: 2a8ff1e8d6b717042882461b758f9a35, type: 2}
 --- !u!114 &4619658238915058850
@@ -163,20 +165,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 7d265155a7185fd48af9b633022bf871, type: 2}
---- !u!114 &5632553718283017398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420949009597519623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 202f2d30e492f1943a029f3954624096, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _id:
-    Value: 
 --- !u!1 &1420949011052769871
 GameObject:
   m_ObjectHideFlags: 0

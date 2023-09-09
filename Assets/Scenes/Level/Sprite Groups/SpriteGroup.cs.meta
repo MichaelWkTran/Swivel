@@ -3,7 +3,10 @@ guid: f9e90b0bfb1623c4c842c66eb8af8cd7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - m_guidGroup: {fileID: 11400000, guid: d71050ed90cb4404599065f87ec83bc5, type: 2}
+  - m_spritesTexture: {instanceID: 0}
+  - m_silhouetteSpritesTexture: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -5,23 +5,41 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Untitled Sprite Group", menuName = "Sprite Group")]
 public class SpriteGroup : ScriptableObject
 {
+    [ObjectID] public string m_ID; //UI ID
 #if UNITY_EDITOR
-    [SerializeField] uint m_numberOfSprites;
+    [SerializeField, HideInInspector] string m_initialID; //Used for checking whether the ID has been changed
+    [SerializeField] GuidObjectGroup m_guidGroup; //What guid group is this object apart of
+    [SerializeField] uint m_numberOfSprites; //Number of sprites stored in this sprite group
 #endif
 
-    public Sprite[] m_sprites;
-    public Sprite[] m_silhouetteSprites;
+    public Sprite[] m_sprites; //Stored sprites to match with a silhouette
+    public Sprite[] m_silhouetteSprites; //Stored silhouette to match with a sprites
 
 #if UNITY_EDITOR
-    public Texture2D m_spritesTexture;
-    public Texture2D m_silhouetteSpritesTexture;
-#endif
+    public Texture2D m_spritesTexture; //The sprite sheet used to extract the sprites to match
+    public Texture2D m_silhouetteSpritesTexture; //The sprite sheet used to extract the silhouette sprites
 
     void OnValidate()
     {
+        //Update the size of sprite arrays
         Array.Resize(ref m_sprites, (int)m_numberOfSprites);
         Array.Resize(ref m_silhouetteSprites, (int)m_numberOfSprites);
+
+        //Check Unique UITheme ID
+        CheckUniqueID();
     }
+
+    void CheckUniqueID()
+    {
+        if (m_guidGroup == null) { Debug.LogError("Guid group is not assigned", this); return; }
+        if (m_initialID == m_ID) return;
+        m_initialID = m_ID;
+
+        //Search asset guids
+        if (Array.Find(m_guidGroup.m_StoredGuidObjects, storedObject => ((SpriteGroup)storedObject).m_ID == m_ID) != null) CheckUniqueID();
+    }
+
+#endif
 
     public Sprite GetSilhouetteFromSprite(Sprite _sprite)
     {

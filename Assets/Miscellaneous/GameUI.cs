@@ -1,10 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
+    [ObjectID] public string m_ID; //UI ID
+#if UNITY_EDITOR
+    [SerializeField, HideInInspector] string m_initialID; //Used for checking whether the ID has been changed
+    [SerializeField] GuidObjectGroup m_guidGroup; //What guid group is this object apart of
+#endif
     public Canvas m_mainCanvas; //The canvas that shows the main UI
     public Canvas m_gameOverCanvas; //The canvas that shows the game over screen
     public Canvas m_pauseCanvas; //The canvas that shows the pause screen
@@ -19,6 +26,26 @@ public class GameUI : MonoBehaviour
     {
         m_gameMode = FindObjectOfType<GameMode>();
     }
+
+#if UNITY_EDITOR
+    void OnValidate()
+    {
+        //Check Unique UITheme ID
+        CheckUniqueID();
+    }
+
+    void CheckUniqueID()
+    {
+        if (m_guidGroup == null) { Debug.LogError("Guid group is not assigned", this); return; }
+        if (m_initialID == m_ID) return;
+        m_initialID = m_ID;
+
+        //Search asset guids
+        if (Array.Find(m_guidGroup.m_StoredGuidObjects, storedObject => ((GameObject)storedObject).GetComponent<GameUI>().m_ID == m_ID) != null)
+            CheckUniqueID();
+    }
+
+#endif
 
     public void OnPauseButtonClick()
     {
