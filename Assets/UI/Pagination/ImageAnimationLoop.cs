@@ -8,7 +8,7 @@ public class ImageAnimationLoop : MonoBehaviour
     public Sprite[] m_animationFrames;
     public float m_frameDuration = 0.2f;
 
-    void Start()
+    void OnEnable()
     {
         StartCoroutine(AnimateLoop());
     }

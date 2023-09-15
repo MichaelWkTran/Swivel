@@ -15,7 +15,7 @@ public class Enviroment : MonoBehaviour
     {
         get
         {
-            if (m_currentEnviroment == null) m_currentEnviroment = ((GameObject)m_guidGroup.m_ObjectGUIDs[0].m_assetReference).GetComponent<Enviroment>();
+            if (m_currentEnviroment == null) m_currentEnviroment = m_guidGroup.GetComponentByGUID<Enviroment>(SaveSystem.m_data.m_currentEnviromentGUID);
             return m_currentEnviroment;
         }
 

@@ -6,7 +6,7 @@ public class GameUI : MonoBehaviour
 {
     public static ObjectGUIDGroup m_guidGroup => (ObjectGUIDGroup)AssetDatabase.LoadAssetAtPath
     (
-        "",//"Assets/Scenes/Level/Sprite Groups/Sprite GUID Groups.asset",
+        "Assets/Scenes/Level/UI Themes/UI Themes GUID Group.asset",
         typeof(ObjectGUIDGroup)
     ); //What guid group is this object apart of
 
@@ -15,7 +15,7 @@ public class GameUI : MonoBehaviour
     {
         get
         {
-            if (m_currentGameUI == null) m_currentGameUI = (GameUI)m_guidGroup.m_ObjectGUIDs[0].m_assetReference;
+            if (m_currentGameUI == null) m_currentGameUI = m_guidGroup.GetComponentByGUID<GameUI>(SaveSystem.m_data.m_currentUIThemeGUID);
             return m_currentGameUI;
         }
 

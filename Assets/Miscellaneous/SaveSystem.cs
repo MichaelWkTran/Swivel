@@ -11,7 +11,7 @@ public static class SaveSystem
 
     [Serializable] public class SaveData
     {
-        public SaveData() { Load(); }
+        public SaveData() => Load();
 
         //Game Variables
         public float m_money;

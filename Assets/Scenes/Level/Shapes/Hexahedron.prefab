@@ -523,8 +523,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5395b26ab91fe4b821b2e0cb029ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_dragSensitivity: 1
-  m_snapSlerpFactor: 5
   m_isDragging: 0
   m_faceTextureOffset: 0.01
   m_emissiveIntensity: 0

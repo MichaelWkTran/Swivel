@@ -19,7 +19,7 @@ public class SpriteGroup : ScriptableObject
     {
         get
         {
-            if (m_currentSpriteGroup == null) m_currentSpriteGroup = (SpriteGroup)m_guidGroup.m_ObjectGUIDs[0].m_assetReference;
+            if (m_currentSpriteGroup == null) m_currentSpriteGroup = m_guidGroup.GetObjectByGUID<SpriteGroup>(SaveSystem.m_data.m_currentSpriteGroupGUID); 
             return m_currentSpriteGroup;
         }
 
