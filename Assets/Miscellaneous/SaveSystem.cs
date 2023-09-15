@@ -17,6 +17,7 @@ public static class SaveSystem
         public float m_money;
 
         public string m_currentEnviromentGUID;
+        public string m_currentSpriteGroupGUID;
         public string m_currentUIThemeGUID;
         
         public uint m_unlockedLevels;

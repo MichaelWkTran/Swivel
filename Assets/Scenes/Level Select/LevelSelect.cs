@@ -20,7 +20,7 @@ public class LevelSelect : MonoBehaviour
         Time.timeScale = 1.0f;
 
         //Update Enviroment
-        UpdateEnviroment(GameMode.m_EnviromentPrefab);
+        UpdateEnviroment(Enviroment.m_CurrentEnviroment);
         
         //Set settings in settings menu
         if (m_isApplicationStarted)
@@ -51,14 +51,14 @@ public class LevelSelect : MonoBehaviour
         foreach (Enviroment enviroment in enviroments) Destroy(enviroment.gameObject);
 
         //Set Background
-        GameMode.m_EnviromentPrefab = _newEnviromentPrefab;
-        Instantiate(GameMode.m_EnviromentPrefab);
+        Enviroment.m_CurrentEnviroment = _newEnviromentPrefab;
+        Instantiate(Enviroment.m_CurrentEnviroment);
 
         //Set Level buttons
         m_LevelButtons = FindObjectsOfType<LevelButton>(true);
         foreach (var levelButton in m_LevelButtons)
         {
-            Color enviromentColour = GameMode.m_EnviromentPrefab.m_colour;
+            Color enviromentColour = Enviroment.m_CurrentEnviroment.m_colour;
             levelButton.ShapeImage.color = enviromentColour;
 
             Vector3 backgroundHSV;

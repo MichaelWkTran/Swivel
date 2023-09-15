@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b95fcc6ac16a5ea40956483f1bef091f, type: 3}
-  m_Name: Sprite Group Guid Group
+  m_Script: {fileID: 11500000, guid: 04e81ad3a2df64a409ffab984c2cc315, type: 3}
+  m_Name: Sprite GUID Groups
   m_EditorClassIdentifier: 
-  m_storedGuidObjects: []
+  m_objectGUIDs:
+  - m_assetReference: {fileID: 11400000, guid: 1d9fcf3a12fc3f5469bdcfca5f8a097b, type: 2}
+    m_GUID: ef5e3551-448d-46e6-9c53-7aee366d732b

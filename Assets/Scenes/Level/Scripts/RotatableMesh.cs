@@ -28,10 +28,10 @@ public class RotatableMesh : MonoBehaviour
     void Start()
     {
         m_material = GetComponent<MeshRenderer>().sharedMaterial;
-        m_material.color = GameMode.m_EnviromentPrefab.m_colour;
+        m_material.color = Enviroment.m_CurrentEnviroment.m_colour;
 
         //Select Random Image from m_SpriteGroupAsset
-        var avalibleSprites = new List<Sprite>(GameMode.m_SpriteGroupAsset.m_silhouetteSprites);
+        var avalibleSprites = new List<Sprite>(SpriteGroup.m_CurrentSpriteGroup.m_silhouetteSprites);
         m_faceTextures = GetComponentsInChildren<SpriteRenderer>(true);
         for (int i = 0; i < m_faceTextures.Length; i++)
         {

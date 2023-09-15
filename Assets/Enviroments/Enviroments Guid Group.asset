@@ -9,7 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b95fcc6ac16a5ea40956483f1bef091f, type: 3}
-  m_Name: Enviroments Guid Group
+  m_Script: {fileID: 11500000, guid: 04e81ad3a2df64a409ffab984c2cc315, type: 3}
+  m_Name: Enviroments GUID Group
   m_EditorClassIdentifier: 
-  m_storedGuidObjects: []
+  m_objectGUIDs:
+  - m_assetReference: {fileID: 1420949009597519623, guid: 558fa10083986c34883079f2d3303adb,
+      type: 3}
+    m_GUID: 1f1fa9ff-4adf-411c-b86d-1a11d0da29cc
+  - m_assetReference: {fileID: 1420949009597519623, guid: 45a998b06bdb05d418625b676e3f3279,
+      type: 3}
+    m_GUID: e5da7cb3-ee3b-45e7-95a6-12217057e02f

@@ -25,33 +25,6 @@ public class GameMode : MonoBehaviour
         }
         set { m_rotatableMeshPrefab = value; }
     }
-    static SpriteGroup m_spriteGroupAsset; public static SpriteGroup m_SpriteGroupAsset
-    {
-        get
-        {
-            if (m_spriteGroupAsset == null) m_spriteGroupAsset = (SpriteGroup)AssetDatabase.LoadAssetAtPath("Assets/Scenes/Level/Sprite Groups/Cats.asset", typeof(SpriteGroup));
-            return m_spriteGroupAsset;
-        }
-        set { m_spriteGroupAsset = value; }
-    }
-    static Enviroment m_enviromentPrefab; public static Enviroment m_EnviromentPrefab
-    {
-        get
-        {
-            if (m_enviromentPrefab == null) m_enviromentPrefab = (Enviroment)AssetDatabase.LoadAssetAtPath("Assets/Enviroments/Default Enviroment.prefab", typeof(Enviroment));
-            return m_enviromentPrefab;
-        }
-        set { m_enviromentPrefab = value; }
-    }
-    static GameUI m_uiPrefab; public static GameUI m_UIPrefab
-    {
-        get
-        {
-            if (m_uiPrefab == null) m_uiPrefab = (GameUI)AssetDatabase.LoadAssetAtPath("Assets/Scenes/Level/UI Themes/Default.prefab", typeof(GameUI));
-            return m_uiPrefab;
-        }
-        set { m_uiPrefab = value; }
-    }
 
 
     void Start()
@@ -60,9 +33,9 @@ public class GameMode : MonoBehaviour
         Time.timeScale = 1.0f;
 
         //Setup Shape, Enviroment, and UI
-        Enviroment enviroment = Instantiate(m_EnviromentPrefab);
+        Enviroment enviroment = Instantiate(Enviroment.m_CurrentEnviroment);
         m_rotatableMesh = Instantiate(m_RotatableMeshPrefab);
-        m_gameUI = Instantiate(m_UIPrefab); m_gameUI.transform.parent = transform; m_gameUI.gameObject.name = "UI";
+        m_gameUI = Instantiate(GameUI.m_CurrentGameUI); m_gameUI.transform.parent = transform; m_gameUI.gameObject.name = "UI";
 
         //Randomise Image
         {
@@ -132,13 +105,13 @@ public class GameMode : MonoBehaviour
         Sprite selectedSilhouette = m_rotatableMesh.m_faceTextures[selectedFaceIndex].sprite;
 
         //Set the current sprite to the sprite corresponding with the silhouette of the face in sprite group
-        m_gameUI.m_currentImage.sprite = m_SpriteGroupAsset.GetSpriteFromSilhouette(selectedSilhouette);
+        m_gameUI.m_currentImage.sprite = SpriteGroup.m_CurrentSpriteGroup.GetSpriteFromSilhouette(selectedSilhouette);
     }
 
     public void WinRound()
     {
         //Check whether the player can win this round
-        if (m_rotatableMesh.GetCurrentFace().sprite != m_SpriteGroupAsset.GetSilhouetteFromSprite(m_gameUI.m_currentImage.sprite)) return;
+        if (m_rotatableMesh.GetCurrentFace().sprite != SpriteGroup.m_CurrentSpriteGroup.GetSilhouetteFromSprite(m_gameUI.m_currentImage.sprite)) return;
 
         //Update current round
         m_round++;

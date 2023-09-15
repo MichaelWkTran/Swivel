@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9e90b0bfb1623c4c842c66eb8af8cd7, type: 3}
   m_Name: Cats
   m_EditorClassIdentifier: 
-  m_numberOfSprites: 20
+  m_description: 
   m_sprites:
   - {fileID: -1229624422, guid: 192ea0fe9f191374b92e550bd45c12ca, type: 3}
   - {fileID: 51721579, guid: 192ea0fe9f191374b92e550bd45c12ca, type: 3}
@@ -55,6 +55,7 @@ MonoBehaviour:
   - {fileID: -1072215242, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
   - {fileID: 1265400388, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
   - {fileID: 389520279, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
+  m_numberOfSprites: 20
   m_spritesTexture: {fileID: 2800000, guid: 192ea0fe9f191374b92e550bd45c12ca, type: 3}
   m_silhouetteSpritesTexture: {fileID: 2800000, guid: 6b6cb58ee00270b4d96e0bdf95d38e95,
     type: 3}
