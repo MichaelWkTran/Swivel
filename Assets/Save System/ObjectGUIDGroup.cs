@@ -1,9 +1,6 @@
 using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-
-//NOTE: Implement saving system, getting GUID by object, and custom inspector for preventing multiple instances of an object in a array
 
 [CreateAssetMenu(fileName = "Untitled Object GUID Group", menuName = "Object GUID Group")]
 public class ObjectGUIDGroup : ScriptableObject
@@ -22,10 +19,12 @@ public class ObjectGUIDGroup : ScriptableObject
     [SerializeField] ObjectGUID[] m_objectGUIDs;
     public ObjectGUID[] m_ObjectGUIDs => m_objectGUIDs;
 
-    public UnityEngine.Object GetObjectFromGUID(string _comparedGUID) => Array.Find(m_objectGUIDs, i =>
+    public UnityEngine.Object GetObjectFromGUID(string _GUID) => Array.Find(m_objectGUIDs, i =>
     {
-        return i.m_GUID == _comparedGUID;
+        return i.m_GUID == _GUID;
     }).m_assetReference;
+
+    public string GetGUIDFromObject(UnityEngine.Object _object) => Array.Find(m_objectGUIDs, i => i.m_assetReference == _object).m_GUID;
 
     public T GetObjectByGUID<T>(string _guid) where T : UnityEngine.Object
     {
@@ -60,6 +59,20 @@ public class ObjectGUIDGroup : ScriptableObject
     void OnValidate()
     {
         CheckUniqueIDs();
+
+        //Ensure all stored objects are unique
+        {
+            var uniqueAssets = new HashSet<UnityEngine.Object>();
+            for (int i = 0; i < m_objectGUIDs.Length; i++)
+            {
+                if (uniqueAssets.Contains(m_objectGUIDs[i].m_assetReference))
+                {
+                    Debug.Log("The asset named " + m_objectGUIDs[i].m_assetReference.name + " is already referenced in this group", this);
+                    m_objectGUIDs[i].m_assetReference = null;
+                }
+                else uniqueAssets.Add(m_objectGUIDs[i].m_assetReference);
+            }
+        }
     }
 
     void CheckUniqueIDs()

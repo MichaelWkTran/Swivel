@@ -87,12 +87,6 @@ public class GameMode : MonoBehaviour
         if (!m_paused) Pause();
     }
 
-    void OnApplicationQuit()
-    {
-        //Save the game when the player exits the application
-        SaveSystem.Save();
-    }
-
     public void RandomizeImage()
     {
         //Get the radomly selected silhouette from the rotable mesh

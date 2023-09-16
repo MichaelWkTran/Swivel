@@ -19,7 +19,13 @@ public class GameUI : MonoBehaviour
             return m_currentGameUI;
         }
 
-        set { m_currentGameUI = value; }
+        set
+        {
+            m_currentGameUI = value;
+
+            if (m_currentGameUI == null) return;
+            SaveSystem.m_data.m_currentUIThemeGUID = m_guidGroup.GetGUIDFromObject(m_currentGameUI.gameObject);
+        }
     }
 
     public Canvas m_mainCanvas; //The canvas that shows the main UI

@@ -23,7 +23,11 @@ public class SpriteGroup : ScriptableObject
             return m_currentSpriteGroup;
         }
 
-        set { m_currentSpriteGroup = value; }
+        set
+        {
+            m_currentSpriteGroup = value;
+            SaveSystem.m_data.m_currentSpriteGroupGUID = m_guidGroup.GetGUIDFromObject(m_currentSpriteGroup);
+        }
     }
 
     public Sprite[] m_sprites; //Stored sprites to match with a silhouette

@@ -19,7 +19,13 @@ public class Enviroment : MonoBehaviour
             return m_currentEnviroment;
         }
 
-        set { m_currentEnviroment = value; }
+        set
+        {
+            m_currentEnviroment = value;
+
+            if (m_currentEnviroment == null) return;
+            SaveSystem.m_data.m_currentEnviromentGUID = m_guidGroup.GetGUIDFromObject(m_currentEnviroment.gameObject);
+        }
     }
 
     public Color m_colour; //What colour the shape would be

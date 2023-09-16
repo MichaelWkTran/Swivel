@@ -22,6 +22,7 @@ public static class SaveSystem
         
         public uint m_unlockedLevels;
         public List<string> m_unlockedEnviromentGUIDs;
+        public List<string> m_unlockedSpriteGroupGUIDs;
         public List<string> m_unlockedUIThemeGUIDs;
 
         //Settings
