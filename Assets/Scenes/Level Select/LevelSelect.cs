@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -70,6 +71,11 @@ public class LevelSelect : MonoBehaviour
 
             levelButton.GetComponent<Image>().color = enviromentColour;
         }
+    }
+
+    public void UpdateGameUI(GameUI _newGameUI)
+    {
+        GameUI.m_CurrentGameUI = _newGameUI;
     }
 
     #region Title Menu

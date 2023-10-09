@@ -147,7 +147,6 @@ GameObject:
   - component: {fileID: 4396157846890102682}
   - component: {fileID: 9204063098524814960}
   - component: {fileID: 6531753193370420429}
-  - component: {fileID: 7686097772419550608}
   m_Layer: 5
   m_Name: Enviroment Select Button
   m_TagString: Untagged
@@ -271,16 +270,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7686097772419550608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4456511314219703108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dda0ca019f9faf4ea749e482b76c043, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_enviromentPrefab: {fileID: 0}
