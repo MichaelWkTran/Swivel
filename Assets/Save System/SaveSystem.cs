@@ -11,8 +11,6 @@ public static class SaveSystem
 
     [Serializable] public class SaveData
     {
-        public SaveData() => Load();
-
         //Game Variables
         public float m_money;
 
@@ -30,16 +28,29 @@ public static class SaveSystem
         public float m_musicVolume;
         public int m_qualityLevel;
     }
-    static bool m_isLoaded = false;
-    public static SaveData m_data = new SaveData();
+    static SaveData m_data;
+    public static SaveData m_Data
+    {
+        get
+        {
+            //Initilize and load data if none currently exists
+            if (m_data == null)
+            {
+                m_data = new SaveData();
+                Load();
+            }
+
+            return m_data;
+        }
+    }
 
     //Saves the data from m_data to the file, Application.persistentDataPath + m_fileName
     public static void Save()
     {
-        if (!m_isLoaded) return;
+        if (m_data == null) return;
         
         //Get the file directory of the save data
-        string path = Application.persistentDataPath + m_fileName;
+        string path = Application.persistentDataPath + '/' + m_fileName;
         
         //Load from Json
         string saveDataJson = JsonUtility.ToJson(m_data);
@@ -59,10 +70,11 @@ public static class SaveSystem
     //Loads the data stored in Application.persistentDataPath + m_fileName to m_data
     public static void Load()
     {
-        m_isLoaded = true;
+        //Ensure that the data is initialized before loading
+        if (m_data == null) m_data = new SaveData();
         
         //Get the file directory of the save data
-        string path = Application.persistentDataPath + m_fileName;
+        string path = Application.persistentDataPath + '/' + m_fileName;
         
         //Check whether the file in the searched path exists, if not then exit the function
         if (!File.Exists(path)) { Debug.LogError("Save file not found in " + path); return; }

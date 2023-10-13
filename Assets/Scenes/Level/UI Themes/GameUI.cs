@@ -15,7 +15,7 @@ public class GameUI : MonoBehaviour
     {
         get
         {
-            if (m_currentGameUI == null) m_currentGameUI = m_guidGroup.GetComponentByGUID<GameUI>(SaveSystem.m_data.m_currentUIThemeGUID);
+            if (m_currentGameUI == null) m_currentGameUI = m_guidGroup.GetComponentByGUID<GameUI>(SaveSystem.m_Data.m_currentUIThemeGUID);
             return m_currentGameUI;
         }
 
@@ -24,7 +24,7 @@ public class GameUI : MonoBehaviour
             m_currentGameUI = value;
 
             if (m_currentGameUI == null) return;
-            SaveSystem.m_data.m_currentUIThemeGUID = m_guidGroup.GetGUIDFromObject(m_currentGameUI.gameObject);
+            SaveSystem.m_Data.m_currentUIThemeGUID = m_guidGroup.GetGUIDFromObject(m_currentGameUI.gameObject);
         }
     }
 

@@ -126,7 +126,7 @@ public class GameMode : MonoBehaviour
     public void GameOver()
     {
         //Save Data
-        //SaveSystem.m_data.m_money += m_score;
+        //SaveSystem.m_Data.m_money += m_score;
 
         //Enable Game Over Canvas
         m_gameUI.m_gameOverCanvas.gameObject.SetActive(true);
@@ -178,7 +178,7 @@ public class GameMode : MonoBehaviour
 
             new NativeShare().AddFile(filePath)
                 .SetSubject("Awesome score from Overflow")
-                .SetText(SaveSystem.m_data.m_highScore.ToString() + " points!" + "I'm on a roll!")
+                .SetText(SaveSystem.m_Data.m_highScore.ToString() + " points!" + "I'm on a roll!")
                 .SetUrl("https://birdbraingamesdev.itch.io/").Share();
 #endif
         }

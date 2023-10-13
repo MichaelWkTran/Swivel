@@ -26,9 +26,9 @@ public class LevelSelect : MonoBehaviour
         //Set settings in settings menu
         if (m_isApplicationStarted)
         {
-            m_audioMixer.SetFloat("sfxVolume", SaveSystem.m_data.m_sfxVolume);
-            m_audioMixer.SetFloat("musicVolume", SaveSystem.m_data.m_musicVolume);
-            QualitySettings.SetQualityLevel(SaveSystem.m_data.m_qualityLevel);
+            m_audioMixer.SetFloat("sfxVolume", SaveSystem.m_Data.m_sfxVolume);
+            m_audioMixer.SetFloat("musicVolume", SaveSystem.m_Data.m_musicVolume);
+            QualitySettings.SetQualityLevel(SaveSystem.m_Data.m_qualityLevel);
             m_isApplicationStarted = false;
         }
 
@@ -92,17 +92,17 @@ public class LevelSelect : MonoBehaviour
     #region Settings Menu
     public void SetSFXVolume(float _value)
     {
-        m_audioMixer.SetFloat("sfxVolume", SaveSystem.m_data.m_sfxVolume = _value);
+        m_audioMixer.SetFloat("sfxVolume", SaveSystem.m_Data.m_sfxVolume = _value);
     }
 
     public void SetMusicVolume(float _value)
     {
-        m_audioMixer.SetFloat("musicVolume", SaveSystem.m_data.m_musicVolume = _value);
+        m_audioMixer.SetFloat("musicVolume", SaveSystem.m_Data.m_musicVolume = _value);
     }
 
     public void SetQuality(int _qualityIndex)
     {
-        QualitySettings.SetQualityLevel(SaveSystem.m_data.m_qualityLevel = _qualityIndex);
+        QualitySettings.SetQualityLevel(SaveSystem.m_Data.m_qualityLevel = _qualityIndex);
     }
     #endregion
 
