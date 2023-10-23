@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +6,8 @@ public class LevelSelect : MonoBehaviour
     static bool m_isApplicationStarted = true;
 
     [Header("Level Select Screen")]
-    [HideInInspector] public LevelButton[] m_LevelButtons;
+    [SerializeField] RectTransform m_levelButtonsContent;
+    [HideInInspector] public LevelButton[] m_levelButtons;
 
     [Header("Settings Screen")]
     [SerializeField] UnityEngine.Audio.AudioMixer m_audioMixer;
@@ -20,9 +20,18 @@ public class LevelSelect : MonoBehaviour
     {
         Time.timeScale = 1.0f;
 
+        //Set Levels Unlocked
+        m_levelButtons = new LevelButton[m_levelButtonsContent.childCount];
+        for (int i = 0; i < m_levelButtonsContent.childCount; i++)
+        {
+            LevelButton levelButton = m_levelButtonsContent.GetChild(i).GetComponent<LevelButton>();
+            m_levelButtons[i] = levelButton;
+            //if (i > SaveSystem.m_Data.m_unlockedLevels) levelButton.GetComponent<Button>().interactable = false;
+        }
+
         //Update Enviroment
         UpdateEnviroment(Enviroment.m_CurrentEnviroment);
-        
+
         //Set settings in settings menu
         if (m_isApplicationStarted)
         {
@@ -45,6 +54,11 @@ public class LevelSelect : MonoBehaviour
         m_graphicsDropdown.value = QualitySettings.GetQualityLevel();
     }
 
+    public void UpdateSpriteGroup(SpriteGroup _newSpriteGroup)
+    {
+        SpriteGroup.m_CurrentSpriteGroup = _newSpriteGroup;
+    }
+
     public void UpdateEnviroment(Enviroment _newEnviromentPrefab)
     {
         //Destroy existing enviroments in the world
@@ -56,8 +70,7 @@ public class LevelSelect : MonoBehaviour
         Instantiate(Enviroment.m_CurrentEnviroment);
 
         //Set Level buttons
-        m_LevelButtons = FindObjectsOfType<LevelButton>(true);
-        foreach (var levelButton in m_LevelButtons)
+        foreach (var levelButton in m_levelButtons)
         {
             Color enviromentColour = Enviroment.m_CurrentEnviroment.m_colour;
             levelButton.ShapeImage.color = enviromentColour;

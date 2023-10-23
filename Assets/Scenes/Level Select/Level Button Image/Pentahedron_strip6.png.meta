@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bf783206fea8a8548be8e26c5955a4c8
+guid: 193ba47b3698bd742b6e69fc568478ba
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Square Pyramid_strip6_0
+      name: Pentahedron_strip6_0
       rect:
         serializedVersion: 2
         x: 0
@@ -133,14 +133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fa64fa12c0b93840a8a0cd29a409868
-      internalID: 832127523
+      spriteID: b7138c7f664a957439585446bf8623d7
+      internalID: 1235597541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square Pyramid_strip6_1
+      name: Pentahedron_strip6_1
       rect:
         serializedVersion: 2
         x: 128
@@ -154,14 +154,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfb5a4072a9afa641ae49845a2247abd
-      internalID: -956685268
+      spriteID: 423be90d2beec9f439ff8c4c81476aa1
+      internalID: -594868735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square Pyramid_strip6_2
+      name: Pentahedron_strip6_2
       rect:
         serializedVersion: 2
         x: 256
@@ -175,14 +175,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e72884ec838f5d344979ac9b18a53c43
-      internalID: -1297876309
+      spriteID: 6fe86a9c9fa037547a7ee8e88a8924f8
+      internalID: 275168100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square Pyramid_strip6_3
+      name: Pentahedron_strip6_3
       rect:
         serializedVersion: 2
         x: 384
@@ -196,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d902132e000bed4d9c2c11fd9094998
-      internalID: -1235553496
+      spriteID: 42a579a7f566a71439bf8d05b0b24343
+      internalID: 846943079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square Pyramid_strip6_4
+      name: Pentahedron_strip6_4
       rect:
         serializedVersion: 2
         x: 512
@@ -217,14 +217,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 341caa0fb4147464cae3f940b3a1b038
-      internalID: 1075151851
+      spriteID: d8f071fd28d064d48b76a69fed0c7601
+      internalID: -12430219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square Pyramid_strip6_5
+      name: Pentahedron_strip6_5
       rect:
         serializedVersion: 2
         x: 640
@@ -238,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef1363fb0b8007d4c98c70bddf760e44
-      internalID: 1082123303
+      spriteID: 60e0c859e169f934592842a6adb0014e
+      internalID: 1736363675
       vertices: []
       indices: 
       edges: []
@@ -247,7 +247,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7cd4ed5ca5b724d4ab144109dfadd0d6
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -255,12 +255,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Square Pyramid_strip6_3: -1235553496
-      Square Pyramid_strip6_0: 832127523
-      Square Pyramid_strip6_2: -1297876309
-      Square Pyramid_strip6_5: 1082123303
-      Square Pyramid_strip6_4: 1075151851
-      Square Pyramid_strip6_1: -956685268
+      Pentahedron_strip6_3: 846943079
+      Pentahedron_strip6_1: -594868735
+      Pentahedron_strip6_0: 1235597541
+      Pentahedron_strip6_2: 275168100
+      Pentahedron_strip6_4: -12430219
+      Pentahedron_strip6_5: 1736363675
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
