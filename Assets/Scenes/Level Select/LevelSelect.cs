@@ -72,17 +72,20 @@ public class LevelSelect : MonoBehaviour
         //Set Level buttons
         foreach (var levelButton in m_levelButtons)
         {
-            Color enviromentColour = Enviroment.m_CurrentEnviroment.m_colour;
-            levelButton.ShapeImage.color = enviromentColour;
+            //Get the current colour of the button
+            {
+                levelButton.ShapeImage.color *= Enviroment.m_CurrentEnviroment.m_colour;
+            }
 
-            Vector3 backgroundHSV;
-            Color.RGBToHSV(enviromentColour, out backgroundHSV.x, out backgroundHSV.y, out backgroundHSV.z);
-            backgroundHSV.x = Mathf.Repeat(backgroundHSV.x + 0.15f, 1.0f);
-            backgroundHSV.y -= 0.6f;
-            enviromentColour = Color.HSVToRGB(backgroundHSV.x, backgroundHSV.y, backgroundHSV.z);
-
-
-            levelButton.GetComponent<Image>().color = enviromentColour;
+            //Modify the colour of the button background
+            {
+                Vector3 buttonBgHSV; Color.RGBToHSV(Enviroment.m_CurrentEnviroment.m_colour, out buttonBgHSV.x, out buttonBgHSV.y, out buttonBgHSV.z);
+                buttonBgHSV.x = Mathf.Repeat(buttonBgHSV.x + 0.15f, 1.0f);
+                buttonBgHSV.y -= 0.6f;
+                Color buttonBgColour = Color.HSVToRGB(buttonBgHSV.x, buttonBgHSV.y, buttonBgHSV.z);
+                
+                levelButton.BackgroundImage.color *= buttonBgColour;
+            }
         }
     }
 
