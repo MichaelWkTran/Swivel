@@ -5,11 +5,7 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(Camera), typeof(Volume))]
 public class Enviroment : MonoBehaviour
 {
-    public static ObjectGUIDGroup m_guidGroup => (ObjectGUIDGroup)AssetDatabase.LoadAssetAtPath
-    (
-        "Assets/Enviroments/Enviroments GUID Group.asset",
-        typeof(ObjectGUIDGroup)
-    );
+    public static ObjectGUIDGroup m_guidGroup => Resources.Load<ObjectGUIDGroup>("Enviroments/Enviroments GUID Group.asset");
     static Enviroment m_currentEnviroment = null; //Current enviroment
     public static Enviroment m_CurrentEnviroment
     {

@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 [RequireComponent(typeof(MeshRenderer))]
@@ -148,6 +150,7 @@ public class RotatableMesh : MonoBehaviour
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(RotatableMesh))]
 public class RotatableMeshEditor : Editor
 {
@@ -210,3 +213,4 @@ public class RotatableMeshEditor : Editor
         }
     }
 }
+#endif

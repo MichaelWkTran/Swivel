@@ -35,7 +35,7 @@ public class GameOverTimeline : MonoBehaviour
 
         //Setup binding in director
         var director = GetComponent<PlayableDirector>();
-        director.playableAsset = (PlayableAsset)AssetDatabase.LoadAssetAtPath("Assets/Scenes/Level/Game Over.playable", typeof(PlayableAsset));
+        director.playableAsset = Resources.Load<PlayableAsset>("Assets/Scenes/Level/Game Over.playable");
         foreach (var playableAssetOutput in director.playableAsset.outputs) switch (playableAssetOutput.streamName)
             {
                 case "Rotatable Mesh Animation":
