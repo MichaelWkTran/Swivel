@@ -79,12 +79,12 @@ public class LevelSelect : MonoBehaviour
 
             //Modify the colour of the button background
             {
-                Vector3 buttonBgHSV; Color.RGBToHSV(Enviroment.m_CurrentEnviroment.m_colour, out buttonBgHSV.x, out buttonBgHSV.y, out buttonBgHSV.z);
-                buttonBgHSV.x = Mathf.Repeat(buttonBgHSV.x + 0.15f, 1.0f);
-                buttonBgHSV.y -= 0.6f;
-                Color buttonBgColour = Color.HSVToRGB(buttonBgHSV.x, buttonBgHSV.y, buttonBgHSV.z);
-                
-                levelButton.BackgroundImage.color *= buttonBgColour;
+                //Vector3 buttonBgHSV; Color.RGBToHSV(Enviroment.m_CurrentEnviroment.m_colour, out buttonBgHSV.x, out buttonBgHSV.y, out buttonBgHSV.z);
+                //buttonBgHSV.x = Mathf.Repeat(buttonBgHSV.x + 0.15f, 1.0f);
+                //buttonBgHSV.y -= 0.6f;
+                //Color buttonBgColour = Color.HSVToRGB(buttonBgHSV.x, buttonBgHSV.y, buttonBgHSV.z);
+                //
+                //levelButton.BackgroundImage.color *= buttonBgColour;
             }
         }
     }

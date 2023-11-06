@@ -17,10 +17,12 @@ public static class SaveSystem
         public string m_currentSpriteGroupGUID;
         public string m_currentUIThemeGUID;
         
-        public uint m_unlockedLevels;
-        public List<string> m_unlockedEnviromentGUIDs;
-        public List<string> m_unlockedSpriteGroupGUIDs;
-        public List<string> m_unlockedUIThemeGUIDs;
+        public uint m_unlockedLevels; //How many levels have the player currently unlocked
+        public List<string> m_unlockedEnviromentGUIDs = new List<string>();
+        public List<string> m_unlockedSpriteGroupGUIDs = new List<string>();
+        public List<string> m_unlockedUIThemeGUIDs = new List<string>();
+
+        public float[] m_highScores = new float[7]; //Each index in the vector represents a level from which the highscore belongs to.
 
         //Settings
         public float m_sfxVolume;

@@ -15,7 +15,7 @@ public class GameMode : MonoBehaviour
     RotatableMesh m_rotatableMesh; //The rotatable mesh that the player interacts with
     GameUI m_gameUI; //Where all the UI elements are stored
 
-    [Header("Static Prefabs")]
+    [Header("Static Variables")]
     static RotatableMesh m_rotatableMeshPrefab; public static RotatableMesh m_RotatableMeshPrefab
     {
         get
@@ -25,6 +25,7 @@ public class GameMode : MonoBehaviour
         }
         set { m_rotatableMeshPrefab = value; }
     }
+    public static uint m_currentLevelIndex = 0;
 
 
     void Start()
@@ -126,7 +127,9 @@ public class GameMode : MonoBehaviour
     public void GameOver()
     {
         //Save Data
-        //SaveSystem.m_Data.m_money += m_score;
+        SaveSystem.m_Data.m_money += m_score;
+        bool newHighScore = SaveSystem.m_Data.m_highScores[m_currentLevelIndex] < m_score;
+        if (newHighScore) SaveSystem.m_Data.m_highScores[m_currentLevelIndex] = m_score;
 
         //Enable Game Over Canvas
         m_gameUI.m_gameOverCanvas.gameObject.SetActive(true);
@@ -164,23 +167,23 @@ public class GameMode : MonoBehaviour
         {
             yield return new WaitForEndOfFrame();
 
-#if UNITY_ANDROID || UNITY_IOS
-            //Takes the screen shot
-            Texture2D screenShot = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
-            screenShot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
-            screenShot.Apply();
-
-            string filePath = Path.Combine(Application.temporaryCachePath, "shared img.png");
-            File.WriteAllBytes(filePath, screenShot.EncodeToPNG());
-
-            //Destroy screenshot to avoid memory leaks
-            Destroy(screenShot);
-
-            new NativeShare().AddFile(filePath)
-                .SetSubject("Awesome score from Overflow")
-                .SetText(SaveSystem.m_Data.m_highScore.ToString() + " points!" + "I'm on a roll!")
-                .SetUrl("https://birdbraingamesdev.itch.io/").Share();
-#endif
+//#if UNITY_ANDROID || UNITY_IOS
+//            //Takes the screen shot
+//            Texture2D screenShot = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+//            screenShot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+//            screenShot.Apply();
+//
+//            string filePath = Path.Combine(Application.temporaryCachePath, "shared img.png");
+//            File.WriteAllBytes(filePath, screenShot.EncodeToPNG());
+//
+//            //Destroy screenshot to avoid memory leaks
+//            Destroy(screenShot);
+//
+//            new NativeShare().AddFile(filePath)
+//                .SetSubject("Awesome score from Overflow")
+//                .SetText(SaveSystem.m_Data.m_highScore.ToString() + " points!" + "I'm on a roll!")
+//                .SetUrl("https://birdbraingamesdev.itch.io/").Share();
+//#endif
         }
 
         TakeScreenshotAndShare();

@@ -54,13 +54,14 @@ public class RotatableMesh : MonoBehaviour
         //Rotate the mesh with the mouse
         if (IsMouseHeld())
         {
-            m_isDragging = true;
-
             //Rotate the mesh
-            Vector2 difference = m_currentMousePos - m_prevMousePos;
+            Vector2 difference = m_isDragging ? m_currentMousePos - m_prevMousePos : Vector2.zero;
             difference *= m_dragSensitivity;
             transform.RotateAround(transform.position, Camera.main.transform.up, -difference.x);
             transform.RotateAround(transform.position, Camera.main.transform.right, difference.y);
+
+            //Set Dragging
+            m_isDragging = true;
 
             //Update mouse previous position
             m_prevMousePos = m_currentMousePos;
@@ -69,7 +70,7 @@ public class RotatableMesh : MonoBehaviour
         else
         {
             //Update current and previous mouse position so that they dont cause the mesh to snap when rotating
-            m_currentMousePos = m_prevMousePos = Input.mousePosition;
+            //m_currentMousePos = m_prevMousePos = Input.mousePosition;
 
             //Get the index of the target face 
             if (m_isDragging || m_targetFaceIndex < 0)
