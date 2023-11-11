@@ -20,7 +20,7 @@ public class GameMode : MonoBehaviour
     {
         get
         {
-            if (m_rotatableMeshPrefab == null) m_rotatableMeshPrefab = Resources.Load<RotatableMesh>("Assets/Scenes/Level/Shapes/Cube.prefab");
+            if (m_rotatableMeshPrefab == null) m_rotatableMeshPrefab = Resources.Load<RotatableMesh>("Cube");
             return m_rotatableMeshPrefab;
         }
         set { m_rotatableMeshPrefab = value; }

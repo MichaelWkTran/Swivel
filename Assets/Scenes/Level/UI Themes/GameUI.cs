@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
-    public static ObjectGUIDGroup m_guidGroup => Resources.Load<ObjectGUIDGroup>("Assets/Scenes/Level/UI Themes/UI Themes GUID Group.asset"); //What guid group is this object apart of
+    public static ObjectGUIDGroup m_guidGroup => Resources.Load<ObjectGUIDGroup>("UI Themes GUID Group"); //What guid group is this object apart of
     static GameUI m_currentGameUI = null; //Current game UI
     public static GameUI m_CurrentGameUI
     {

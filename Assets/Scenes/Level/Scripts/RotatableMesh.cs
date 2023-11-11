@@ -7,7 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class RotatableMesh : MonoBehaviour
 {
-    static float m_dragSensitivity = 2.0f;
+    static float m_dragSensitivity = 1.5f;
     static float m_snapSlerpFactor = 5.0f;
     public bool m_isDragging = false;
 
@@ -71,9 +71,6 @@ public class RotatableMesh : MonoBehaviour
         //Rotate the mesh to allign with the camera
         else
         {
-            //Update current and previous mouse position so that they dont cause the mesh to snap when rotating
-            //m_currentMousePos = m_prevMousePos = Input.mousePosition;
-
             //Get the index of the target face 
             if (m_isDragging || m_targetFaceIndex < 0)
             {

@@ -9,7 +9,7 @@ public class SpriteGroup : ScriptableObject
     [TextArea] public string m_description;
 #endif
 
-    public static ObjectGUIDGroup m_guidGroup => Resources.Load<ObjectGUIDGroup>("Assets/Scenes/Level/Sprite Groups/Sprite GUID Groups.asset"); //What guid group is this object apart of
+    public static ObjectGUIDGroup m_guidGroup => Resources.Load<ObjectGUIDGroup>("Sprite GUID Groups"); //What guid group is this object apart of
     static SpriteGroup m_currentSpriteGroup = null; //Current sprite group
     public static SpriteGroup m_CurrentSpriteGroup
     {

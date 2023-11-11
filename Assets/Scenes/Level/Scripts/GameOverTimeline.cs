@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
-using UnityEditor;
 using UnityEngine.Playables;
 
 public class GameOverTimeline : MonoBehaviour
@@ -35,7 +34,7 @@ public class GameOverTimeline : MonoBehaviour
 
         //Setup binding in director
         var director = GetComponent<PlayableDirector>();
-        director.playableAsset = Resources.Load<PlayableAsset>("Assets/Scenes/Level/Game Over.playable");
+        director.playableAsset = Resources.Load<PlayableAsset>("Game Over");
         foreach (var playableAssetOutput in director.playableAsset.outputs) switch (playableAssetOutput.streamName)
             {
                 case "Rotatable Mesh Animation":
