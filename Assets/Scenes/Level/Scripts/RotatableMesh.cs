@@ -27,6 +27,9 @@ public class RotatableMesh : MonoBehaviour
     [SerializeField] RotatableMeshGameOver m_rotatableMeshGameOverPrefab;
     public RotatableMeshGameOver m_RotatableMeshGameOverPrefab { get { return m_rotatableMeshGameOverPrefab; } }
 
+    //Components
+    public ParticleSystem m_winParticles;
+
     void Start()
     {
         m_material = GetComponent<MeshRenderer>().sharedMaterial;

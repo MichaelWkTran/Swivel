@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.026786184, g: 0.008787796, b: 0.056437448, a: 1}
+  m_IndirectSpecularColor: {r: 0.02880704, g: 0.0106462035, b: 0.05944862, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -177,7 +177,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_rotatableMeshPrefab
       value: 
-      objectReference: {fileID: 4164133039159409096, guid: ef5e83758212d9f478254030cb110847,
+      objectReference: {fileID: 9101275061560181523, guid: d2c23e0c9fbb6564aa8f29c20a83e22d,
         type: 3}
     - target: {fileID: 4807755118899137714, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
@@ -677,7 +677,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_rotatableMeshPrefab
       value: 
-      objectReference: {fileID: 4164133039159409096, guid: b6bba1b1dcec8d446a5f8135e32efe85,
+      objectReference: {fileID: 9101275061560181523, guid: 2ffc9cb37f134a84c86be6e48340c4b5,
         type: 3}
     - target: {fileID: 4807755118899137714, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
@@ -2376,7 +2376,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_rotatableMeshPrefab
       value: 
-      objectReference: {fileID: 7135777586098338327, guid: 56d269edc4bed744590c86cdf421085d,
+      objectReference: {fileID: 9101275061560181523, guid: 2c66f35222e5b56498a9c32832626646,
         type: 3}
     - target: {fileID: 4807755118899137714, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
@@ -2754,8 +2754,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: 
-  m_VerticalAxis: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
@@ -3927,7 +3927,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_rotatableMeshPrefab
       value: 
-      objectReference: {fileID: 9146351718007523113, guid: 14c148a26bd15db43bbfcebc5e288c53,
+      objectReference: {fileID: 9101275061560181523, guid: 90a20521cce7bce45a5852aa5ecaddc3,
         type: 3}
     - target: {fileID: 4807755118899137714, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
@@ -5455,8 +5455,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1839445607}
   m_HandleRect: {fileID: 1839445606}
   m_Direction: 0
-  m_Value: -0.0000002515498
-  m_Size: 0.62575346
+  m_Value: -0.00000019162907
+  m_Size: 0.6724866
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5876,7 +5876,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_rotatableMeshPrefab
       value: 
-      objectReference: {fileID: 9146351718007523113, guid: 6c4e7c6d392883640b2bb4753f41be3f,
+      objectReference: {fileID: 9101275061560181523, guid: 2ed53b68521dd3644b3b16a7f0389464,
         type: 3}
     - target: {fileID: 4807755118899137714, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
@@ -7763,7 +7763,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_rotatableMeshPrefab
       value: 
-      objectReference: {fileID: 7135777586098338327, guid: cef784a2fd6bc7840be7c71f1c9a35d9,
+      objectReference: {fileID: 9101275061560181523, guid: c9c7c3851e8b2df4aa777aa2fefb18d9,
         type: 3}
     - target: {fileID: 4807755118899137714, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
@@ -10243,7 +10243,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_rotatableMeshPrefab
       value: 
-      objectReference: {fileID: 4164133039159409096, guid: aa7559d9e6a922a4bbb8534750340da6,
+      objectReference: {fileID: 9101275061560181523, guid: 6603165894d7583479ac2b4190766824,
         type: 3}
     - target: {fileID: 4807755118899137713, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}

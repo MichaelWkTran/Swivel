@@ -108,6 +108,9 @@ public class GameMode : MonoBehaviour
         //Check whether the player can win this round
         if (m_rotatableMesh.GetCurrentFace().sprite != SpriteGroup.m_CurrentSpriteGroup.GetSilhouetteFromSprite(m_gameUI.m_currentImage.sprite)) return;
 
+        //Play Win Particles
+        m_rotatableMesh.m_winParticles.Play();
+
         //Update current round
         m_round++;
         
