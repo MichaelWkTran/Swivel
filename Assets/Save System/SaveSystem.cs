@@ -2,11 +2,12 @@ using System;
 using System.IO;
 using UnityEngine;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters.Binary;
 
 //Note that this system is only loading and saving data to m_data and does not interact with external information
 public static class SaveSystem
 {
-    const string m_fileName = "/Save.json";//"Save.bb";
+    const string m_fileName = "/Save.bb";//"/Save.json";
 
     [Serializable] public class SaveData
     {
@@ -25,9 +26,10 @@ public static class SaveSystem
         public float[] m_highScores = new float[7]; //Each index in the vector represents a level from which the highscore belongs to.
 
         //Settings
-        public float m_sfxVolume;
-        public float m_musicVolume;
-        public int m_qualityLevel;
+        public float m_sfxVolume = -100.0f;
+        public float m_musicVolume = -100.0f;
+        public int m_qualityLevel = -1;
+        public float m_dragSensitivity = -1.0f;
     }
     static SaveData m_data;
     public static SaveData m_Data
@@ -54,18 +56,18 @@ public static class SaveSystem
         string path = Application.persistentDataPath + m_fileName;
         
         //Load from Json
-        string saveDataJson = JsonUtility.ToJson(m_data);
-        File.WriteAllText(path, saveDataJson);
+        //string saveDataJson = JsonUtility.ToJson(m_data);
+        //File.WriteAllText(path, saveDataJson);
 
-        ////Create and open file stream
-        //FileStream stream = new FileStream(path, FileMode.Create);
+        //Create and open file stream
+        FileStream stream = new FileStream(path, FileMode.Create);
         
-        ////Create binary formatter and serialize the game data
-        //BinaryFormatter formatter = new BinaryFormatter();
-        //formatter.Serialize(stream, m_data);
+        //Create binary formatter and serialize the game data
+        BinaryFormatter formatter = new BinaryFormatter();
+        formatter.Serialize(stream, m_data);
         
-        ////Close the file stream
-        //stream.Close();
+        //Close the file stream
+        stream.Close();
     }
 
     //Loads the data stored in Application.persistentDataPath + m_fileName to m_data
@@ -81,17 +83,17 @@ public static class SaveSystem
         if (!File.Exists(path)) { Debug.LogError("Save file not found in " + path); return; }
         
         //Load to Json
-        string saveDataJson = File.ReadAllText(path);
-        m_data = JsonUtility.FromJson<SaveData>(saveDataJson);
+        //string saveDataJson = File.ReadAllText(path);
+        //m_data = JsonUtility.FromJson<SaveData>(saveDataJson);
         
-        ////Create and open file stream
-        //FileStream stream = new FileStream(path, FileMode.Open);
+        //Create and open file stream
+        FileStream stream = new FileStream(path, FileMode.Open);
         
-        ////Create binary formatter and deserialize the game data
-        //BinaryFormatter formatter = new BinaryFormatter();
-        //m_data = formatter.Deserialize(stream) as SaveData;
+        //Create binary formatter and deserialize the game data
+        BinaryFormatter formatter = new BinaryFormatter();
+        m_data = formatter.Deserialize(stream) as SaveData;
         
-        ////Close the file stream
-        //stream.Close();
+        //Close the file stream
+        stream.Close();
     }
 }

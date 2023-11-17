@@ -14,7 +14,7 @@ public class LevelSelect : MonoBehaviour
     [SerializeField] Slider m_sfxVolumeSlider;
     [SerializeField] Slider m_musicVolumeSlider;
     [SerializeField] TMPro.TMP_Dropdown m_graphicsDropdown;
-
+    [SerializeField] Slider m_dragSensitivitySlider;
 
     void Start()
     {
@@ -33,13 +33,15 @@ public class LevelSelect : MonoBehaviour
         UpdateEnviroment(Enviroment.m_CurrentEnviroment);
 
         //Set settings in settings menu
-        if (m_isApplicationStarted)
-        {
-            m_audioMixer.SetFloat("sfxVolume", SaveSystem.m_Data.m_sfxVolume);
-            m_audioMixer.SetFloat("musicVolume", SaveSystem.m_Data.m_musicVolume);
-            QualitySettings.SetQualityLevel(SaveSystem.m_Data.m_qualityLevel);
-            m_isApplicationStarted = false;
-        }
+        //if (m_isApplicationStarted)
+        //{
+        //    if (SaveSystem.m_Data.m_sfxVolume >= 0.0f) m_audioMixer.SetFloat("sfxVolume", SaveSystem.m_Data.m_sfxVolume);
+        //    if (SaveSystem.m_Data.m_musicVolume >= 0.0f) m_audioMixer.SetFloat("musicVolume", SaveSystem.m_Data.m_musicVolume);
+        //    if (SaveSystem.m_Data.m_qualityLevel >= 0.0f) QualitySettings.SetQualityLevel(SaveSystem.m_Data.m_qualityLevel);
+        //    if (SaveSystem.m_Data.m_dragSensitivity >= 0.0f) RotatableMesh.m_dragSensitivity = SaveSystem.m_Data.m_dragSensitivity;
+        //
+        //    m_isApplicationStarted = false;
+        //}
 
         {
             float sfxVolumeValue; m_audioMixer.GetFloat("sfxVolume", out sfxVolumeValue);
@@ -49,6 +51,10 @@ public class LevelSelect : MonoBehaviour
         {
             float musicVolumeValue; m_audioMixer.GetFloat("musicVolume", out musicVolumeValue);
             m_musicVolumeSlider.value = musicVolumeValue;
+        }
+
+        {
+            m_dragSensitivitySlider.value = RotatableMesh.m_dragSensitivity;
         }
 
         m_graphicsDropdown.value = QualitySettings.GetQualityLevel();
@@ -120,6 +126,12 @@ public class LevelSelect : MonoBehaviour
     {
         QualitySettings.SetQualityLevel(SaveSystem.m_Data.m_qualityLevel = _qualityIndex);
     }
+
+    public void SetDragSensitivity(float _value)
+    {
+        RotatableMesh.m_dragSensitivity = _value;
+    }
+
     #endregion
 
     #region Credits Menu

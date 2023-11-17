@@ -431,7 +431,7 @@ PrefabInstance:
     - target: {fileID: 7135777586098338326, guid: 56d269edc4bed744590c86cdf421085d,
         type: 3}
       propertyPath: m_Name
-      value: Pentahedron2
+      value: Pentahedron
       objectReference: {fileID: 0}
     - target: {fileID: 7135777586098338409, guid: 56d269edc4bed744590c86cdf421085d,
         type: 3}

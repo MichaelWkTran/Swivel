@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.028648922, g: 0.011114535, b: 0.06004117, a: 1}
+  m_IndirectSpecularColor: {r: 0.026598142, g: 0.008583581, b: 0.056130264, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5394,6 +5394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772a510e5a08f7c43ae5847382f61c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_audioMixer: {fileID: 24100000, guid: 4544084a2a836994eb08687244236d51, type: 2}
 --- !u!4 &826795974
 Transform:
   m_ObjectHideFlags: 0
@@ -5817,8 +5818,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: 
-  m_VerticalAxis: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
@@ -5906,7 +5907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

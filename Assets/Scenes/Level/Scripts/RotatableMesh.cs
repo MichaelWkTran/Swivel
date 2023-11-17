@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEditor;
 #endif
 using UnityEngine;
+using UnityEngine.Audio;
 
 [RequireComponent(typeof(MeshRenderer))]
 public class RotatableMesh : MonoBehaviour
 {
-    static float m_dragSensitivity = 1.5f;
+    public static float m_dragSensitivity = 1.5f;
     static float m_snapSlerpFactor = 5.0f;
     public bool m_isDragging = false;
 
@@ -32,6 +33,7 @@ public class RotatableMesh : MonoBehaviour
 
     void Start()
     {
+        //Set Shape Colour
         m_material = GetComponent<MeshRenderer>().sharedMaterial;
         m_material.color = Enviroment.m_CurrentEnviroment.m_colour;
 

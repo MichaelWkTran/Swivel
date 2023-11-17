@@ -5061,7 +5061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_score: 0
   m_startTime: 10
-  m_timeDecreaseRate: 0.3
+  m_timeDecreaseRate: 0.2
   m_minTime: 2
 --- !u!114 &666780010
 MonoBehaviour:
