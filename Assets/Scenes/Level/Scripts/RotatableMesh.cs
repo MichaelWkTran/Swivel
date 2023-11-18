@@ -38,7 +38,7 @@ public class RotatableMesh : MonoBehaviour
         m_material.color = Enviroment.m_CurrentEnviroment.m_colour;
 
         //Select Random Image from m_SpriteGroupAsset
-        var avalibleSprites = new List<Sprite>(SpriteGroup.m_CurrentSpriteGroup.m_silhouetteSprites);
+        var avalibleSprites = new List<Sprite>(SpriteGroup.m_CurrentSpriteGroup.m_sprites);
         m_faceTextures = GetComponentsInChildren<SpriteRenderer>(true);
         for (int i = 0; i < m_faceTextures.Length; i++)
         {

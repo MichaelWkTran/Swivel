@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UI;
@@ -90,23 +89,20 @@ public class GameMode : MonoBehaviour
 
     public void RandomizeImage()
     {
-        //Get the radomly selected silhouette from the rotable mesh
+        //Get the radomly selected silhouette from the rotable mesh and apply it to the UI
         int selectedFaceIndex = Random.Range(0, m_rotatableMesh.m_faceTextures.Length);
         if (m_rotatableMesh.m_targetFaceIndex == selectedFaceIndex)
         {
             selectedFaceIndex++;
             if (m_rotatableMesh.m_faceTextures.Length == selectedFaceIndex) selectedFaceIndex -= 2;
         }
-        Sprite selectedSilhouette = m_rotatableMesh.m_faceTextures[selectedFaceIndex].sprite;
-
-        //Set the current sprite to the sprite corresponding with the silhouette of the face in sprite group
-        m_gameUI.m_currentImage.sprite = SpriteGroup.m_CurrentSpriteGroup.GetSpriteFromSilhouette(selectedSilhouette);
+        m_gameUI.m_currentImage.sprite = m_rotatableMesh.m_faceTextures[selectedFaceIndex].sprite;
     }
 
     public void WinRound()
     {
         //Check whether the player can win this round
-        if (m_rotatableMesh.GetCurrentFace().sprite != SpriteGroup.m_CurrentSpriteGroup.GetSilhouetteFromSprite(m_gameUI.m_currentImage.sprite)) return;
+        if (m_rotatableMesh.GetCurrentFace().sprite != m_gameUI.m_currentImage.sprite) return;
 
         //Play Win Particles
         m_rotatableMesh.m_winParticles.Play();

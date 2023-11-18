@@ -5,15 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Untitled Object GUID Group", menuName = "Object GUID Group")]
 public class ObjectGUIDGroup : ScriptableObject
 {
-    //A struct pairing a Unity Object reference with a GUID string
-    [Serializable] public struct ObjectGUID
-    {
-        //The Unity object to be referenced
-        public UnityEngine.Object m_assetReference;
-
-        //A unique identifier for the object
-        [ObjectID] public string m_GUID;
-    }
+    ////A struct pairing a Unity Object reference with a GUID string
+    //[Serializable] public struct ObjectGUID
+    //{
+    //    //The Unity object to be referenced
+    //    public UnityEngine.Object m_assetReference;
+    //
+    //    //A unique identifier for the object
+    //    [ObjectID] public string m_GUID;
+    //}
 
     //An array of ObjectGUID structs to store grouped objects
     [SerializeField] ObjectGUID[] m_objectGUIDs;
@@ -80,14 +80,14 @@ public class ObjectGUIDGroup : ScriptableObject
         HashSet<string> uniqueGUIDs = new HashSet<string>();
         List<int> duplicateIndices = new List<int>();
 
-        // Find duplicate GUIDs and collect their indices.
+        //Find duplicate GUIDs and collect their indices.
         for (int i = 0; i < m_objectGUIDs.Length; i++)
         {
             ObjectGUID objectGUID = m_objectGUIDs[i];
             if (!uniqueGUIDs.Add(objectGUID.m_GUID)) duplicateIndices.Add(i);
         }
 
-        // Reset GUIDs for duplicates.
+        //Reset GUIDs for duplicates.
         foreach (int duplicateIndex in duplicateIndices)
         {
             ScriptableObjectIdDrawer.ResetGuid(ref m_objectGUIDs[duplicateIndex].m_GUID, this);

@@ -26,30 +26,10 @@ public class SpriteGroup : ScriptableObject
         }
     }
 
-    public Sprite[] m_sprites; //Stored sprites to match with a silhouette
-    public Sprite[] m_silhouetteSprites; //Stored silhouette to match with a sprites
-
+    public Sprite[] m_sprites; //Stored silhouette sprites
 #if UNITY_EDITOR
-    [SerializeField] uint m_numberOfSprites;//Number of sprites stored in this sprite group
     public Texture2D m_spritesTexture; //The sprite sheet used to extract the sprites to match
-    public Texture2D m_silhouetteSpritesTexture; //The sprite sheet used to extract the silhouette sprites
 #endif
-
-    public Sprite GetSilhouetteFromSprite(Sprite _sprite)
-    {
-        int index = Array.IndexOf(m_sprites, _sprite);
-        if (index < 0) return null;
-
-        return m_silhouetteSprites[index];
-    }
-
-    public Sprite GetSpriteFromSilhouette(Sprite _silhouette)
-    {
-        int index = Array.IndexOf(m_silhouetteSprites, _silhouette);
-        if (index < 0) return null;
-
-        return m_sprites[index];
-    }
 }
 
 #if UNITY_EDITOR
@@ -68,16 +48,6 @@ public class SpriteGroupEditor : Editor
                 Resources.LoadAll<Sprite>(spriteGroup.m_spritesTexture.name),
                 spriteGroup.m_sprites,
                 spriteGroup.m_sprites.Length
-            );
-        }
-
-        if (GUILayout.Button("Set Silhouette Sprites from Texture") && spriteGroup.m_silhouetteSpritesTexture != null)
-        {
-            Array.Copy
-            (
-                Resources.LoadAll<Sprite>(spriteGroup.m_silhouetteSpritesTexture.name),
-                spriteGroup.m_silhouetteSprites,
-                spriteGroup.m_silhouetteSprites.Length
             );
         }
     }

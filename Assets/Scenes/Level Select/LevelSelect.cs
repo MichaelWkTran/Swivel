@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class LevelSelect : MonoBehaviour
 {
-    static bool m_isApplicationStarted = true;
+    //static bool m_isApplicationStarted = true;
 
     [Header("Level Select Screen")]
     [SerializeField] RectTransform m_levelButtonsContent;
@@ -72,7 +72,7 @@ public class LevelSelect : MonoBehaviour
         foreach (Enviroment enviroment in enviroments) Destroy(enviroment.gameObject);
 
         //Set Background
-        Enviroment.m_CurrentEnviroment = _newEnviromentPrefab;
+        //Enviroment.m_CurrentEnviroment = _newEnviromentPrefab;
         Instantiate(Enviroment.m_CurrentEnviroment);
 
         //Set Level buttons
