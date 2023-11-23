@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -140,32 +140,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_LevelSelect_1
+      name: UI_Stars_Easy
       rect:
         serializedVersion: 2
-        x: 545
-        y: 464
-        width: 545
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e6edf2baf358a14a899eb8eec398087
-      internalID: -2130421921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_LevelSelect_5
-      rect:
-        serializedVersion: 2
-        x: 834
-        y: 288
+        x: 0
+        y: 272
         width: 256
         height: 96
       alignment: 0
@@ -182,13 +161,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_LevelSelect_9grid
+      name: UI_Currency_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 96
+        x: 896
+        y: 527
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,12 +182,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_LevelSelect_7
+      name: UI_LevelX_Header
       rect:
         serializedVersion: 2
-        x: 8
-        y: 117
-        width: 400
+        x: 640
+        y: 624
+        width: 384
         height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -224,13 +203,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_LevelSelect_10
+      name: UI_PanelHeading
       rect:
         serializedVersion: 2
-        x: 578
-        y: 96
-        width: 256
-        height: 96
+        x: 256
+        y: 336
+        width: 704
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,13 +224,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_LevelSelect_11
+      name: UI_Currency_2
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 312
-        height: 96
+        x: 960
+        y: 527
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,11 +245,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_LevelSelect_12
+      name: UI_Stars_Med
       rect:
         serializedVersion: 2
-        x: 834
-        y: 192
+        x: 0
+        y: 176
         width: 256
         height: 96
       alignment: 0
@@ -287,32 +266,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_LevelSelect_13
+      name: UI_Stars_Empty
       rect:
         serializedVersion: 2
-        x: 834
-        y: 96
-        width: 256
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b45e6c496a725a4cb9180e1a5f8cfb7
-      internalID: -753209478
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_LevelSelect_17
-      rect:
-        serializedVersion: 2
-        x: 578
-        y: 288
+        x: 0
+        y: 368
         width: 256
         height: 96
       alignment: 0
@@ -329,11 +287,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_LevelSelect_18
+      name: UI_Stars_Hard
       rect:
         serializedVersion: 2
-        x: 578
-        y: 192
+        x: 0
+        y: 80
         width: 256
         height: 96
       alignment: 0
@@ -349,48 +307,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: UI_LevelSelect_19
-      rect:
-        serializedVersion: 2
-        x: 578
-        y: 0
-        width: 256
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 361b1158b20a85d479251a4db9fcb4fd
-      internalID: -1366729932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_LevelSelect_21
-      rect:
-        serializedVersion: 2
-        x: 834
-        y: 0
-        width: 256
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08c8f420a01dd464a8f50d1a4156f04c
-      internalID: 896514556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -402,28 +318,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      UI_PanelHeading: 766236360
       UI_LevelSelect_13: -753209478
-      UI_LevelSelect_11: 720463597
       UI_LevelSelect_14: -2069906415
-      UI_LevelSelect_18: -530407285
-      UI_LevelSelect_5: 846334924
-      UI_LevelSelect_7: 547113806
+      UI_Stars_Hard: -530407285
+      UI_LevelX_Header: 547113806
       UI_LevelSelect_19: -1366729932
       UI_LevelSelect_15: -1513414579
+      UI_Currency_1: 1022917452
       UI_LevelSelect_2: 631897983
       UI_LevelSelect_9: 2140448012
       UI_LevelSelect_16: 1233953156
       UI_LevelSelect_4: -975851325
-      UI_LevelSelect_10: 766236360
-      UI_LevelSelect_12: 2140168936
+      UI_Stars_Empty: -1399489480
+      UI_Stars_Med: 2140168936
+      UI_Stars_Easy: 846334924
       UI_LevelSelect_0: -1298798533
       UI_LevelSelect_21: 896514556
       UI_LevelSelect_8: 1674589950
-      UI_LevelSelect_9grid: 1022917452
       UI_LevelSelect_3: -1213126238
-      UI_LevelSelect_17: -1399489480
-      UI_LevelSelect_1: -2130421921
       UI_LevelSelect_20: 1080954360
+      UI_Currency_2: 720463597
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
