@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c0c82a7e5007b0d4da74f5327187bdfe
+guid: c2f132af93b02424cabe8938ee5dbe2c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -119,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_LevelSelect_0
+      name: UI_Credits_0_Programmer
       rect:
         serializedVersion: 2
         x: 0
-        y: 464
-        width: 545
-        height: 256
+        y: 284
+        width: 369
+        height: 284
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43b6625e0a96fb742aa43b9c5a6d632f
-      internalID: -1298798533
+      spriteID: bfd3cf4c9f5f4e240a034bc70309fe0a
+      internalID: 889186278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Stars_Easy
+      name: UI_Credits_0_Artist
       rect:
         serializedVersion: 2
-        x: 0
-        y: 272
-        width: 256
-        height: 96
+        x: 369
+        y: 284
+        width: 369
+        height: 284
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,18 +154,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72370e87b605f2242a0128f4608dfd7a
-      internalID: 846334924
+      spriteID: 4fb33ee543a65074f97e54b4df1fc34e
+      internalID: 1189974078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Currency_1
+      name: UI_Credits_0_Developer
       rect:
         serializedVersion: 2
-        x: 896
-        y: 527
+        x: 0
+        y: 0
+        width: 369
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c35e6553415d9c41869c90e92864810
+      internalID: -993244437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Credits_0_Social_4
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 0
         width: 64
         height: 64
       alignment: 0
@@ -175,60 +196,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed94b233fdc80354490f3b6015d3b212
-      internalID: 1022917452
+      spriteID: 96c29c0f78753ec42ba76b3b7a828453
+      internalID: -94041825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_LevelX_Header
+      name: UI_Credits_0_Social_3
       rect:
         serializedVersion: 2
-        x: 640
-        y: 624
-        width: 384
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03b44e04ea87def4c8c7d0bcc05dfbfb
-      internalID: 547113806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_PanelHeading
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 336
-        width: 704
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92807300ffeb5a444915e1f76b380d6f
-      internalID: 766236360
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Currency_2
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 527
+        x: 610
+        y: 0
         width: 64
         height: 64
       alignment: 0
@@ -238,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca5313eb658a8e34d8f2ae7cec4c513d
-      internalID: 720463597
+      spriteID: 56e18e37150bbcf4d9974f8e997c8047
+      internalID: 15450320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Stars_Med
+      name: UI_Credits_0_Social_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 176
-        width: 256
-        height: 96
+        x: 546
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +238,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc4ba3d83c1140d44b61d99339ff8e03
-      internalID: 2140168936
+      spriteID: 2ab01433b82e7aa449b951ee805d6585
+      internalID: 488760157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Stars_Empty
+      name: UI_Credits_0_Social_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 368
-        width: 256
-        height: 96
+        x: 482
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,29 +259,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de6e9642abc018b469dc441c5394a281
-      internalID: -1399489480
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Stars_Hard
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 80
-        width: 256
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f982254c02cf15f4e99d055ce7b2086e
-      internalID: -530407285
+      spriteID: 5cbe3d0465081cf46a497b9aaf70acdf
+      internalID: 1545266451
       vertices: []
       indices: 
       edges: []
@@ -318,27 +276,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UI_PanelHeading: 766236360
-      UI_LevelSelect_13: -753209478
-      UI_LevelSelect_14: -2069906415
-      UI_Stars_Hard: -530407285
-      UI_LevelX_Header: 547113806
-      UI_LevelSelect_19: -1366729932
-      UI_LevelSelect_15: -1513414579
-      UI_Currency_1: 1022917452
-      UI_LevelSelect_2: 631897983
-      UI_LevelSelect_9: 2140448012
-      UI_LevelSelect_16: 1233953156
-      UI_LevelSelect_4: -975851325
-      UI_Stars_Empty: -1399489480
-      UI_Stars_Med: 2140168936
-      UI_Stars_Easy: 846334924
-      UI_LevelSelect_0: -1298798533
-      UI_LevelSelect_21: 896514556
-      UI_LevelSelect_8: 1674589950
-      UI_LevelSelect_3: -1213126238
-      UI_LevelSelect_20: 1080954360
-      UI_Currency_2: 720463597
+      UI_Credits_0_Social_3: 15450320
+      UI_Credits_0_Programmer: 889186278
+      UI_Credits_0_Social_1: 1545266451
+      UI_Credits_0_Artist: 1189974078
+      UI_Credits_0_Social_2: 488760157
+      UI_Credits_0_Social_4: -94041825
+      UI_Credits_0_Developer: -993244437
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
