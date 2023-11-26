@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Untitled Sprite Group", menuName = "Sprite Group")]
-public class SpriteGroup : ScriptableObject
+public class SpriteGroup : ObjectGUID
 {
 #if UNITY_EDITOR
     [TextArea] public string m_description;
@@ -15,7 +15,8 @@ public class SpriteGroup : ScriptableObject
     {
         get
         {
-            if (m_currentSpriteGroup == null) m_currentSpriteGroup = m_guidGroup.GetObjectByGUID<SpriteGroup>(SaveSystem.m_Data.m_currentSpriteGroupGUID); 
+            if (m_currentSpriteGroup == null) m_currentSpriteGroup = m_guidGroup.GetObjectByGUID<GameObject>
+                    (SaveSystem.m_Data.m_currentSpriteGroupGUID)?.GetComponent<SpriteGroup>();
             return m_currentSpriteGroup;
         }
 
@@ -30,6 +31,11 @@ public class SpriteGroup : ScriptableObject
 #if UNITY_EDITOR
     public Texture2D m_spritesTexture; //The sprite sheet used to extract the sprites to match
 #endif
+
+    void OnValidate()
+    {
+        m_assetReference = this;
+    }
 }
 
 #if UNITY_EDITOR

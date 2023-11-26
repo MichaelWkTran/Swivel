@@ -9,7 +9,8 @@ public class GameUI : MonoBehaviour
     {
         get
         {
-            if (m_currentGameUI == null) m_currentGameUI = m_guidGroup.GetComponentByGUID<GameUI>(SaveSystem.m_Data.m_currentUIThemeGUID);
+            if (m_currentGameUI == null) m_currentGameUI = m_guidGroup.GetObjectByGUID<GameObject>
+                    (SaveSystem.m_Data.m_currentUIThemeGUID)?.GetComponent<GameUI>();
             return m_currentGameUI;
         }
 

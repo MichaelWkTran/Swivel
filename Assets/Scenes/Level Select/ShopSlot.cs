@@ -84,7 +84,7 @@ public class ShopSlot : MonoBehaviour
             case ItemType.Silouettes:
                 {
                     ObjectGUID[] objectGUIDs = SpriteGroup.m_guidGroup?.m_ObjectGUIDs;
-                    if (objectGUIDs != null && Array.Exists(objectGUIDs, i => i.m_GUID == m_itemObjectGUID))
+                    if (objectGUIDs != null && Array.Exists(objectGUIDs, i => i.m_guid == m_itemObjectGUID))
                     {
                         SaveSystem.m_Data.m_unlockedSpriteGroupGUIDs.Add(m_itemObjectGUID);
                         SelectItem();
@@ -95,7 +95,7 @@ public class ShopSlot : MonoBehaviour
             case ItemType.Backgrounds:
                 {
                     ObjectGUID[] objectGUIDs = Enviroment.m_guidGroup?.m_ObjectGUIDs;
-                    if (objectGUIDs != null && Array.Exists(objectGUIDs, i => i.m_GUID == m_itemObjectGUID))
+                    if (objectGUIDs != null && Array.Exists(objectGUIDs, i => i.m_guid == m_itemObjectGUID))
                     {
                         SaveSystem.m_Data.m_unlockedEnviromentGUIDs.Add(m_itemObjectGUID);
                         SelectItem();
@@ -106,7 +106,7 @@ public class ShopSlot : MonoBehaviour
             case ItemType.UIThemes:
                 {
                     ObjectGUID[] objectGUIDs = GameUI.m_guidGroup?.m_ObjectGUIDs;
-                    if (objectGUIDs != null && Array.Exists(objectGUIDs, i => i.m_GUID == m_itemObjectGUID))
+                    if (objectGUIDs != null && Array.Exists(objectGUIDs, i => i.m_guid == m_itemObjectGUID))
                     {
                         SaveSystem.m_Data.m_unlockedUIThemeGUIDs.Add(m_itemObjectGUID);
                         SelectItem();

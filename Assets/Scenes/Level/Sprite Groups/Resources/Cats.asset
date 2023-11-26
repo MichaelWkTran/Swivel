@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9e90b0bfb1623c4c842c66eb8af8cd7, type: 3}
   m_Name: Cats
   m_EditorClassIdentifier: 
+  m_assetReference: {fileID: 11400000}
+  m_GUID: 2acf2fed-8351-462f-8c02-aa606e2a369e
   m_description: 
   m_sprites:
   - {fileID: -1229624422, guid: 192ea0fe9f191374b92e550bd45c12ca, type: 3}
@@ -34,28 +36,4 @@ MonoBehaviour:
   - {fileID: -1755471347, guid: 192ea0fe9f191374b92e550bd45c12ca, type: 3}
   - {fileID: -1045772990, guid: 192ea0fe9f191374b92e550bd45c12ca, type: 3}
   - {fileID: -1810107, guid: 192ea0fe9f191374b92e550bd45c12ca, type: 3}
-  m_silhouetteSprites:
-  - {fileID: 1163795749, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: -128185353, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: 1056620160, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: 798698579, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: 1677489036, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: 1506772497, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: 2059675213, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: 1184261531, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: 231542813, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: -1273902887, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: 1119103019, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: -90181576, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: 1179146646, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: -1893827588, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: -1694456385, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: -770223365, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: 1834099819, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: -1072215242, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: 1265400388, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  - {fileID: 389520279, guid: 6b6cb58ee00270b4d96e0bdf95d38e95, type: 3}
-  m_numberOfSprites: 20
   m_spritesTexture: {fileID: 2800000, guid: 192ea0fe9f191374b92e550bd45c12ca, type: 3}
-  m_silhouetteSpritesTexture: {fileID: 2800000, guid: 6b6cb58ee00270b4d96e0bdf95d38e95,
-    type: 3}

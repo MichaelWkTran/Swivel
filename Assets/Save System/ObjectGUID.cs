@@ -7,5 +7,5 @@ public class ObjectGUID : ScriptableObject
     public Object m_assetReference;
 
     //A unique identifier for the object
-    [ObjectID] public string m_GUID;
+    [ObjectID] public string m_guid;
 }

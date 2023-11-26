@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -11,7 +12,8 @@ public class Enviroment : MonoBehaviour
     {
         get
         {
-            if (m_currentEnviroment == null) m_currentEnviroment = m_guidGroup.GetComponentByGUID<Enviroment>(SaveSystem.m_Data.m_currentEnviromentGUID);
+            if (m_currentEnviroment == null) m_currentEnviroment = m_guidGroup.GetObjectByGUID<GameObject>
+                    (SaveSystem.m_Data.m_currentEnviromentGUID)?.GetComponent<Enviroment>();
             return m_currentEnviroment;
         }
 
