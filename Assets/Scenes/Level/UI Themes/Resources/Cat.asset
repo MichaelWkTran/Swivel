@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375d3856a62534941b7fb2b3752ad2eb, type: 3}
   m_Name: Cat
   m_EditorClassIdentifier: 
-  m_assetReference: {fileID: 0}
+  m_assetReference: {fileID: 6328568899336083573, guid: 939b1fe1194daa7438b638c8285af234,
+    type: 3}
   m_guid: dde3e178-d696-4623-9647-8a5bac53dc9c

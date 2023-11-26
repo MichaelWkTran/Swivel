@@ -13,9 +13,5 @@ MonoBehaviour:
   m_Name: UI Themes GUID Group
   m_EditorClassIdentifier: 
   m_objectGUIDs:
-  - m_assetReference: {fileID: 8174749041107249513, guid: 4f651d71f0df0a44d965c13783a3d846,
-      type: 3}
-    m_GUID: c2d15767-095b-42cf-9eb2-e4435cdaf23b
-  - m_assetReference: {fileID: 6328568899336083573, guid: 939b1fe1194daa7438b638c8285af234,
-      type: 3}
-    m_GUID: 309e7871-de9b-44b4-b54d-6d256c7b9246
+  - {fileID: 11400000, guid: 2fbf4849df8ce1b458ae0ee7d0de9b6e, type: 2}
+  - {fileID: 11400000, guid: d6ca18f2037e9c2458a9fa11dcfb8147, type: 2}

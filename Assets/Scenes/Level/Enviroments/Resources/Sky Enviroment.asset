@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375d3856a62534941b7fb2b3752ad2eb, type: 3}
   m_Name: Sky Enviroment
   m_EditorClassIdentifier: 
-  m_assetReference: {fileID: 0}
-  m_GUID: e85ae4d4-5925-4588-a783-88ccfe9f6de3
+  m_assetReference: {fileID: 1420949009597519623, guid: bb515e424b61f2e4a9952032958ca965,
+    type: 3}
+  m_guid: 812e4f38-958c-406e-9b72-cceb7b6bbed7

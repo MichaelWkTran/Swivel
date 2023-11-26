@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375d3856a62534941b7fb2b3752ad2eb, type: 3}
   m_Name: Tatami Enviroment
   m_EditorClassIdentifier: 
-  m_assetReference: {fileID: 0}
-  m_GUID: ebcb1dee-739f-4c29-8195-e31d79ba842d
+  m_assetReference: {fileID: 1801877871127749064, guid: f58a13034ca942747b47a27990a0ee26,
+    type: 3}
+  m_guid: 8bb820ce-dd66-42db-9d97-9dff823d0d5b

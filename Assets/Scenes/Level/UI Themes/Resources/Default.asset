@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375d3856a62534941b7fb2b3752ad2eb, type: 3}
   m_Name: Default
   m_EditorClassIdentifier: 
-  m_assetReference: {fileID: 0}
-  m_guid: 
+  m_assetReference: {fileID: 8174749041107249513, guid: 4f651d71f0df0a44d965c13783a3d846,
+    type: 3}
+  m_guid: 0679e694-70de-4d0f-a9b2-0914ef6c8a32

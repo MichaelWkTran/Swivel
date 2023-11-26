@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Sprite GUID Groups
   m_EditorClassIdentifier: 
   m_objectGUIDs:
-  - m_assetReference: {fileID: 11400000, guid: 1d9fcf3a12fc3f5469bdcfca5f8a097b, type: 2}
-    m_GUID: ef5e3551-448d-46e6-9c53-7aee366d732b
+  - {fileID: 11400000, guid: 1d9fcf3a12fc3f5469bdcfca5f8a097b, type: 2}

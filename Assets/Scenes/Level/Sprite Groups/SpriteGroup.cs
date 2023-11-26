@@ -15,8 +15,8 @@ public class SpriteGroup : ObjectGUID
     {
         get
         {
-            if (m_currentSpriteGroup == null) m_currentSpriteGroup = m_guidGroup.GetObjectByGUID<GameObject>
-                    (SaveSystem.m_Data.m_currentSpriteGroupGUID)?.GetComponent<SpriteGroup>();
+            if (m_currentSpriteGroup == null) m_currentSpriteGroup = m_guidGroup.GetObjectByGUID<SpriteGroup>
+                    (SaveSystem.m_Data.m_currentSpriteGroupGUID);
             return m_currentSpriteGroup;
         }
 

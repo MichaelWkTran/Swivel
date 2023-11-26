@@ -13,12 +13,6 @@ MonoBehaviour:
   m_Name: Enviroments GUID Group
   m_EditorClassIdentifier: 
   m_objectGUIDs:
-  - m_assetReference: {fileID: 1420949009597519623, guid: 558fa10083986c34883079f2d3303adb,
-      type: 3}
-    m_GUID: 1f1fa9ff-4adf-411c-b86d-1a11d0da29cc
-  - m_assetReference: {fileID: 1801877871127749064, guid: f58a13034ca942747b47a27990a0ee26,
-      type: 3}
-    m_GUID: e5da7cb3-ee3b-45e7-95a6-12217057e02f
-  - m_assetReference: {fileID: 1420949009597519623, guid: bb515e424b61f2e4a9952032958ca965,
-      type: 3}
-    m_GUID: 491ba630-b766-43e4-890f-71e9bc3b76e9
+  - {fileID: 11400000, guid: 1a1de1716fbcc9a4e9581dd4081b1ace, type: 2}
+  - {fileID: 11400000, guid: cfbae39fbd76a454b84695b84949ef1d, type: 2}
+  - {fileID: 11400000, guid: 143ad4956f17d7e4e9ef77ab9e6980b6, type: 2}

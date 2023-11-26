@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cats
   m_EditorClassIdentifier: 
   m_assetReference: {fileID: 11400000}
-  m_GUID: 2acf2fed-8351-462f-8c02-aa606e2a369e
+  m_guid: 1fcd9276-e9ff-47e3-8805-6f4c504562b1
   m_description: 
   m_sprites:
   - {fileID: -1229624422, guid: 192ea0fe9f191374b92e550bd45c12ca, type: 3}
