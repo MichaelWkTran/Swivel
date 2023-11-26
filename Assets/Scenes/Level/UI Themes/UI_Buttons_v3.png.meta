@@ -290,8 +290,8 @@ TextureImporter:
       name: UI_Credits_0
       rect:
         serializedVersion: 2
-        x: 271
-        y: 143
+        x: 270
+        y: 142
         width: 96
         height: 96
       alignment: 0
@@ -328,6 +328,132 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI_Settings_0_slider_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3b8f0cc318b914e930031d2e3d4251
+      internalID: -2115824382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Settings_0_slider_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95c0247f5ef92540a001daf277c6ffe
+      internalID: 1048745273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Settings_0_slider_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3796181ca3d564469a56bed9e3659e2
+      internalID: 2141859908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Settings_0_info
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be13e44ab29999d4bb0e4cd56a738f46
+      internalID: -101789275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Settings_0_arrow
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34955fbe1554ab4385fe72853244490
+      internalID: -1594334771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_ExitScene_0
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b20698c500b95c4aba65f8cb4fd41e0
+      internalID: 918536471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -340,16 +466,22 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       UI_Credits_0: 1108803741
+      UI_Settings_0_slider_2: 2141859908
+      UI_Shop_0: 170067363
+      UI_Settings_0_slider_3: 1048745273
+      UI_Settings_0_slider_1: -2115824382
       UI_Replay_0: 108945434
       UI_Pause_0: -1115389622
       UI_Buttons_v3_10: 1724267913
       UI_Gallery_0: -418312989
       UI_Share_0: 1212921156
       UI_Play_0: -689222601
+      UI_Settings_0_arrow: -1594334771
       UI_Settings_0: 1618377889
-      UI_Home_0: -865680234
+      UI_ExitScene_0: 918536471
       UI_Exit_0: 585500311
-      UI_Shop_0: 170067363
+      UI_Home_0: -865680234
+      UI_Settings_0_info: -101789275
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
