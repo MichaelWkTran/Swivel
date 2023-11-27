@@ -59,7 +59,14 @@ public class SceneTransition : MonoBehaviour
 
     IEnumerator FinishTransition()
     {
+        //Play out transition
+        yield return new WaitForEndOfFrame();
+        m_animator.SetTrigger("Load Scene");
+
+        //Wait for the transition to finish
         if (m_outTransition != null) yield return new WaitForSecondsRealtime(m_outTransition.length);
+
+        //Destroy Transition
         Destroy(gameObject);
     }
 
@@ -70,7 +77,6 @@ public class SceneTransition : MonoBehaviour
 
     void OnSceneLoaded(Scene _scene, LoadSceneMode _mode)
     {
-        m_animator.SetTrigger("Load Scene");
         StartCoroutine(FinishTransition());
     }
 }

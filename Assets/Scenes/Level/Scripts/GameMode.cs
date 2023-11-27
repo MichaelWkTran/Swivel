@@ -130,6 +130,12 @@ public class GameMode : MonoBehaviour
         bool newHighScore = SaveSystem.m_Data.m_highScores[m_currentLevelIndex] < m_score;
         if (newHighScore) SaveSystem.m_Data.m_highScores[m_currentLevelIndex] = m_score;
 
+        //Update UI
+        m_gameUI.m_resultsText.text =
+            $"Score: {m_score}\n" +
+            $"Best: {SaveSystem.m_Data.m_highScores[m_currentLevelIndex]}\n";// + 
+            //$"Earned: {}";
+
         //Enable Game Over Canvas
         m_gameUI.m_gameOverCanvas.gameObject.SetActive(true);
 
