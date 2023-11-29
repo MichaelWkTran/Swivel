@@ -1,10 +1,7 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class LevelSelect : MonoBehaviour
 {
-    //static bool m_isApplicationStarted = true;
-
     [Header("Level Select Screen")]
     [SerializeField] RectTransform m_levelButtonsContent;
     [HideInInspector] public LevelButton[] m_levelButtons;
@@ -19,6 +16,7 @@ public class LevelSelect : MonoBehaviour
         {
             LevelButton levelButton = m_levelButtonsContent.GetChild(i).GetComponent<LevelButton>();
             m_levelButtons[i] = levelButton;
+            RotatableMesh.m_shapeColour = levelButton.m_shapeColour;
             //if (i > SaveSystem.m_Data.m_unlockedLevels) levelButton.GetComponent<Button>().interactable = false;
         }
 
@@ -46,7 +44,8 @@ public class LevelSelect : MonoBehaviour
         {
             //Get the current colour of the button
             {
-                levelButton.ShapeImage.color *= Enviroment.m_CurrentEnviroment.m_colour;
+                levelButton.ShapeImage.color = levelButton.m_shapeColour;
+                //levelButton.ShapeImage.color *= Enviroment.m_CurrentEnviroment.m_colour;
             }
 
             //Modify the colour of the button background

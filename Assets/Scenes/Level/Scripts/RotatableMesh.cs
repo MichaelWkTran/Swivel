@@ -20,6 +20,7 @@ public class RotatableMesh : MonoBehaviour
     public float m_faceTextureOffset = 0.01f;
 
     //Rendering variables
+    public static Color m_shapeColour;
     float m_currentEmissiveIntensity;
     public float m_emissiveIntensity;
     Material m_material;
@@ -35,7 +36,7 @@ public class RotatableMesh : MonoBehaviour
     {
         //Set Shape Colour
         m_material = GetComponent<MeshRenderer>().sharedMaterial;
-        m_material.color = Enviroment.m_CurrentEnviroment.m_colour;
+        m_material.color = m_shapeColour;//Enviroment.m_CurrentEnviroment.m_colour;
 
         //Select Random Image from m_SpriteGroupAsset
         var avalibleSprites = new List<Sprite>(SpriteGroup.m_CurrentSpriteGroup.m_sprites);
