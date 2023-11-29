@@ -16,7 +16,6 @@ public class LevelSelect : MonoBehaviour
         {
             LevelButton levelButton = m_levelButtonsContent.GetChild(i).GetComponent<LevelButton>();
             m_levelButtons[i] = levelButton;
-            RotatableMesh.m_shapeColour = levelButton.m_shapeColour;
             //if (i > SaveSystem.m_Data.m_unlockedLevels) levelButton.GetComponent<Button>().interactable = false;
         }
 
