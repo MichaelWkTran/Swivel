@@ -303,7 +303,6 @@ MonoBehaviour:
   m_shapeImage: {fileID: 1673861550614466862}
   m_backgroundImage: {fileID: 4807755118899137713}
   m_highScoreText: {fileID: 5925909526770884997}
-  m_shapeColour: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &7842390819201096878
 MonoBehaviour:
   m_ObjectHideFlags: 0

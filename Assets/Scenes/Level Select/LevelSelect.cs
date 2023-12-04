@@ -43,7 +43,7 @@ public class LevelSelect : MonoBehaviour
         {
             //Get the current colour of the button
             {
-                levelButton.ShapeImage.color = levelButton.m_shapeColour;
+                levelButton.ShapeImage.color = levelButton.m_RotatableMeshPrefab.m_ShapeColour;
                 //levelButton.ShapeImage.color *= Enviroment.m_CurrentEnviroment.m_colour;
             }
 

@@ -1021,6 +1021,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dodecahedron
       objectReference: {fileID: 0}
+    - target: {fileID: 7135777586098338327, guid: 56d269edc4bed744590c86cdf421085d,
+        type: 3}
+      propertyPath: m_shapeColour.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135777586098338327, guid: 56d269edc4bed744590c86cdf421085d,
+        type: 3}
+      propertyPath: m_shapeColour.g
+      value: 0.6745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135777586098338327, guid: 56d269edc4bed744590c86cdf421085d,
+        type: 3}
+      propertyPath: m_shapeColour.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7135777586098338409, guid: 56d269edc4bed744590c86cdf421085d,
         type: 3}
       propertyPath: m_Mesh

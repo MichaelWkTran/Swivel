@@ -5146,6 +5146,7 @@ MonoBehaviour:
   m_animatingBloom: 0
   m_emissionIntensity: 0
   m_animatingEmission: 0
+  m_timeline: {fileID: 11400000, guid: 2fc350f8cc72b7e4da22994c00a2e2aa, type: 2}
   m_deathParticles: {fileID: 541097177}
 --- !u!1 &1070908322
 GameObject:

@@ -2,18 +2,27 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
 using UnityEngine.Playables;
+using UnityEngine.Timeline;
+using TMPro;
+using System;
+using System.Collections;
 
 public class GameOverTimeline : MonoBehaviour
 {
+
     public float m_bloomIntensity;
     public bool m_animatingBloom;
 
     public float m_emissionIntensity;
     public bool m_animatingEmission;
 
+    [SerializeField] PlayableAsset m_timeline;
+    [SerializeField] ParticleSystem m_deathParticles;
     Enviroment m_enviroment;
     RotatableMesh m_rotatableMesh;
-    [SerializeField] ParticleSystem m_deathParticles;
+    CanvasGroup m_gameOverCanvasGroup;
+
+    bool m_isGameOverOpen = false;
 
 #if UNITY_EDITOR
     void OnValidate()
@@ -34,7 +43,7 @@ public class GameOverTimeline : MonoBehaviour
 
         //Setup binding in director
         var director = GetComponent<PlayableDirector>();
-        director.playableAsset = Resources.Load<PlayableAsset>("Game Over");
+        director.playableAsset = m_timeline;
         foreach (var playableAssetOutput in director.playableAsset.outputs) switch (playableAssetOutput.streamName)
             {
                 case "Rotatable Mesh Animation":
@@ -50,10 +59,27 @@ public class GameOverTimeline : MonoBehaviour
         director.Play();
     }
 
+    void OnEnable()
+    {
+        m_gameOverCanvasGroup = FindObjectOfType<GameUI>().m_gameOverCanvas.GetComponent<CanvasGroup>();
+        m_gameOverCanvasGroup.alpha = 0.0f;
+        m_gameOverCanvasGroup.interactable = false;
+    }
+
     void Update()
     {
         AnimateBloom();
         AnimateEmission();
+
+
+        //Open game over Screen via input
+        if (!m_isGameOverOpen)
+        {
+            bool isPointerDown = Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2) ||
+                Array.Exists(Input.touches, i => i.phase == TouchPhase.Began);
+
+            if (isPointerDown) ShowGameOverScreen();
+        }
     }
 
     void AnimateBloom()
@@ -80,5 +106,19 @@ public class GameOverTimeline : MonoBehaviour
 #endif
 
         m_rotatableMesh.FractureShape();
+    }
+
+    public void ShowGameOverScreen()
+    {
+        if (LeanTween.isTweening(m_gameOverCanvasGroup.gameObject) || m_isGameOverOpen) return;
+        IEnumerator SetGameOverInteractable()
+        {
+            yield return new WaitForSeconds(0.1f);
+            m_gameOverCanvasGroup.interactable = true;
+        }
+
+        LeanTween.alphaCanvas(m_gameOverCanvasGroup, 1.0f, 0.5f).setEaseLinear();
+        m_isGameOverOpen = true;
+        StartCoroutine(SetGameOverInteractable());
     }
 }

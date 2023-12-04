@@ -29,4 +29,9 @@ public class GameManager : MonoBehaviour
         //Save the game when the player exits the application
         SaveSystem.Save();
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

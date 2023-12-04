@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1808274589872174875
@@ -165,7 +165,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5701247202127905561
@@ -249,7 +249,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5736787644713975899
@@ -333,7 +333,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8886746101547018066
@@ -417,7 +417,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &2110330716054059268
@@ -432,6 +432,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Square Pyramid
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135777586098338327, guid: 56d269edc4bed744590c86cdf421085d,
+        type: 3}
+      propertyPath: m_shapeColour.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135777586098338327, guid: 56d269edc4bed744590c86cdf421085d,
+        type: 3}
+      propertyPath: m_shapeColour.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135777586098338327, guid: 56d269edc4bed744590c86cdf421085d,
+        type: 3}
+      propertyPath: m_shapeColour.g
+      value: 0.52156866
+      objectReference: {fileID: 0}
+    - target: {fileID: 7135777586098338327, guid: 56d269edc4bed744590c86cdf421085d,
+        type: 3}
+      propertyPath: m_shapeColour.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7135777586098338409, guid: 56d269edc4bed744590c86cdf421085d,
         type: 3}

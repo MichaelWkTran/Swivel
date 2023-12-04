@@ -36,10 +36,6 @@ public class GameMode : MonoBehaviour
         Enviroment enviroment = Instantiate(Enviroment.m_CurrentEnviroment);
         m_rotatableMesh = Instantiate(m_RotatableMeshPrefab);
         m_gameUI = Instantiate(GameUI.m_CurrentGameUI); m_gameUI.transform.parent = transform; m_gameUI.gameObject.name = "UI";
-        {
-            var particleMain = m_rotatableMesh.m_winParticles.main;
-            particleMain.startColor = RotatableMesh.m_shapeColour;
-        } 
 
         //Randomise Image
         {
