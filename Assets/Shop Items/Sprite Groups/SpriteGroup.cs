@@ -1,6 +1,10 @@
 using System;
-using UnityEditor;
 using UnityEngine;
+using System.Collections.Generic;
+#if UNITY_EDITOR
+using UnityEditor;
+using System.Linq;
+#endif
 
 [CreateAssetMenu(fileName = "Untitled Sprite Group", menuName = "Sprite Group")]
 public class SpriteGroup : ObjectGUID
@@ -49,9 +53,12 @@ public class SpriteGroupEditor : Editor
 
         if (GUILayout.Button("Set Sprites from Texture") && spriteGroup.m_spritesTexture != null)
         {
+            List<UnityEngine.Object> spriteList = AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(spriteGroup.m_spritesTexture)).ToList(); spriteList.RemoveAt(0);
+            spriteGroup.m_sprites = new Sprite[spriteList.Count];
+
             Array.Copy
             (
-                Resources.LoadAll<Sprite>(spriteGroup.m_spritesTexture.name),
+                spriteList.ToArray(),
                 spriteGroup.m_sprites,
                 spriteGroup.m_sprites.Length
             );

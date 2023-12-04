@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bf783206fea8a8548be8e26c5955a4c8
+guid: 0f20d16d479265d4b9ac92d5e1df77a2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -115,11 +115,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Square Pyramid_strip6_0
+      name: Pentahedron_strip12_0
       rect:
         serializedVersion: 2
         x: 0
@@ -133,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fa64fa12c0b93840a8a0cd29a409868
-      internalID: 832127523
+      spriteID: de94e4386732eb049ad96e6b381c9fb3
+      internalID: -471347055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square Pyramid_strip6_1
+      name: Pentahedron_strip12_1
       rect:
         serializedVersion: 2
         x: 128
@@ -154,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfb5a4072a9afa641ae49845a2247abd
-      internalID: -956685268
+      spriteID: d1522c194ccde4c46b6a5837dde8afc6
+      internalID: 878513982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square Pyramid_strip6_2
+      name: Pentahedron_strip12_2
       rect:
         serializedVersion: 2
         x: 256
@@ -175,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e72884ec838f5d344979ac9b18a53c43
-      internalID: -1297876309
+      spriteID: 841e1d59d272ae3439210e3f173eb514
+      internalID: 1287732187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square Pyramid_strip6_3
+      name: Pentahedron_strip12_3
       rect:
         serializedVersion: 2
         x: 384
@@ -196,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d902132e000bed4d9c2c11fd9094998
-      internalID: -1235553496
+      spriteID: 111fd309f5fa6d043a1345a21ec5805c
+      internalID: -252175356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square Pyramid_strip6_4
+      name: Pentahedron_strip12_4
       rect:
         serializedVersion: 2
         x: 512
@@ -217,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 341caa0fb4147464cae3f940b3a1b038
-      internalID: 1075151851
+      spriteID: a9a1602f6f1bd9c45a69610accefd041
+      internalID: 745035761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Square Pyramid_strip6_5
+      name: Pentahedron_strip12_5
       rect:
         serializedVersion: 2
         x: 640
@@ -238,8 +250,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef1363fb0b8007d4c98c70bddf760e44
-      internalID: 1082123303
+      spriteID: b20d247565986e94cabd5cc2c4d1c125
+      internalID: -1436345543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pentahedron_strip12_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da47aaaa057e20047ae515d2521da25b
+      internalID: 1018596319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pentahedron_strip12_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1aa4512a567c8b4cabb038ac59faaaa
+      internalID: -1563979864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pentahedron_strip12_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1110f93654507545a88440ba145f9d0
+      internalID: 343383851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pentahedron_strip12_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ea8bdb62f754c44a2ad1c64882e6af
+      internalID: 536727568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pentahedron_strip12_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8703c5e2340e7449be1bc4dac45d4a
+      internalID: 1246594546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pentahedron_strip12_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78aea54661982646ad3d6026d3e9d0a
+      internalID: -1791622201
       vertices: []
       indices: 
       edges: []
@@ -247,7 +385,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7cd4ed5ca5b724d4ab144109dfadd0d6
+    spriteID: cbe91e2b874558647ad70c6158f7d835
     internalID: 0
     vertices: []
     indices: 
@@ -255,12 +393,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Square Pyramid_strip6_3: -1235553496
-      Square Pyramid_strip6_0: 832127523
-      Square Pyramid_strip6_2: -1297876309
-      Square Pyramid_strip6_5: 1082123303
-      Square Pyramid_strip6_4: 1075151851
-      Square Pyramid_strip6_1: -956685268
+      Pentahedron_strip12_5: -1436345543
+      Pentahedron_strip12_8: 343383851
+      Pentahedron_strip12_10: 1246594546
+      Pentahedron_strip12_4: 745035761
+      Pentahedron_strip12_11: -1791622201
+      Pentahedron_strip12_0: -471347055
+      Pentahedron_strip12_2: 1287732187
+      Pentahedron_strip12_3: -252175356
+      Pentahedron_strip12_9: 536727568
+      Pentahedron_strip12_1: 878513982
+      Pentahedron_strip12_7: -1563979864
+      Pentahedron_strip12_6: 1018596319
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

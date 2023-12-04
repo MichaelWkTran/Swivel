@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7dedb111f92b716419ea57287bbe6870
+guid: c1e54f28f1ca25848b4f5be127dce8fa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -115,11 +115,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dodecahedron_strip6_0
+      name: Hexahedron_strip12_0
       rect:
         serializedVersion: 2
         x: 0
@@ -133,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 342320acc54277548acf0052e9014a64
-      internalID: -1692423051
+      spriteID: 50184c99affc0b74c9685ae95674338b
+      internalID: -1565463710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dodecahedron_strip6_1
+      name: Hexahedron_strip12_1
       rect:
         serializedVersion: 2
         x: 128
@@ -154,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c5f3f9389fc2734b8ea1bdc7177da6c
-      internalID: -1570872292
+      spriteID: dc09c0a1839c44543bb52a2390dac607
+      internalID: -1381123617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dodecahedron_strip6_2
+      name: Hexahedron_strip12_2
       rect:
         serializedVersion: 2
         x: 256
@@ -175,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f871d7e510c8d624988e610963c0f1c6
-      internalID: -104897407
+      spriteID: 12acc00fa67fd514a9a8c00c56643512
+      internalID: -786226072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dodecahedron_strip6_3
+      name: Hexahedron_strip12_3
       rect:
         serializedVersion: 2
         x: 384
@@ -196,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 483b2fba2f3c4be4da7255881f4b7991
-      internalID: -1849044554
+      spriteID: dd097b1c449b42343af8a692f775c33c
+      internalID: 270192845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dodecahedron_strip6_4
+      name: Hexahedron_strip12_4
       rect:
         serializedVersion: 2
         x: 512
@@ -217,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e4558568ebff764586696f674a5e5b8
-      internalID: -790957261
+      spriteID: c3a4480c82f1d4145b6f6fa97851267b
+      internalID: 265156330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dodecahedron_strip6_5
+      name: Hexahedron_strip12_5
       rect:
         serializedVersion: 2
         x: 640
@@ -238,8 +250,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1019fd5e65d17c54ab52b19bbc2831c2
-      internalID: 726486698
+      spriteID: a75c405e1bb96284f84cd923f1d707fb
+      internalID: -366268009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hexahedron_strip12_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f69e4c181089a429124a0f8c9ea91f
+      internalID: -813776510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hexahedron_strip12_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b222f08197f463c408be70e7a1852a92
+      internalID: 33611484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hexahedron_strip12_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7c16ca6fce30a4bac51df9c11d61bd
+      internalID: -1606505461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hexahedron_strip12_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd2211d9cc18fd34bb0346afae6f350c
+      internalID: -573405784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hexahedron_strip12_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7dec0c1d370e35488305bd58b17a668
+      internalID: -314977698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hexahedron_strip12_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37afd564b4a19b64f932ae739ae9e1a0
+      internalID: 806362238
       vertices: []
       indices: 
       edges: []
@@ -247,7 +385,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d704dbee6657c334fa4e0408c4c6fc33
+    spriteID: d8bbffe1a900ff746909aa049a56af7a
     internalID: 0
     vertices: []
     indices: 
@@ -255,12 +393,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dodecahedron_strip6_4: -790957261
-      Dodecahedron_strip6_3: -1849044554
-      Dodecahedron_strip6_5: 726486698
-      Dodecahedron_strip6_1: -1570872292
-      Dodecahedron_strip6_2: -104897407
-      Dodecahedron_strip6_0: -1692423051
+      Hexahedron_strip12_6: -813776510
+      Hexahedron_strip12_4: 265156330
+      Hexahedron_strip12_11: 806362238
+      Hexahedron_strip12_0: -1565463710
+      Hexahedron_strip12_5: -366268009
+      Hexahedron_strip12_2: -786226072
+      Hexahedron_strip12_8: -1606505461
+      Hexahedron_strip12_3: 270192845
+      Hexahedron_strip12_10: -314977698
+      Hexahedron_strip12_9: -573405784
+      Hexahedron_strip12_1: -1381123617
+      Hexahedron_strip12_7: 33611484
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

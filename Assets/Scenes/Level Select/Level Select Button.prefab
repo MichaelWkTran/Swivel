@@ -407,11 +407,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_image: {fileID: 1673861550614466862}
-  m_animationFrames:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  m_frameDuration: 0.1
+  m_animationFrames: []
+  m_frameDuration: 0.05
+  m_spritesTexture: {fileID: 0}

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 353670088595a9743b41f25212a2cdc4
+guid: 75a2dfedfba808e4b9ea653e83dc619e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -115,11 +115,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pyramid_strip6_0
+      name: Square Pyramid_strip12_0
       rect:
         serializedVersion: 2
         x: 0
@@ -133,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7aecb8e343dbd94d99003f0808089fb
-      internalID: 1409063464
+      spriteID: 4c738c61b2ade34489ef7de2bf1c118a
+      internalID: 1811287732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pyramid_strip6_1
+      name: Square Pyramid_strip12_1
       rect:
         serializedVersion: 2
         x: 128
@@ -154,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c122739d9506944409cf36304b3e8234
-      internalID: 997785369
+      spriteID: c8fc828026d273f48a9fa5543ebd7ad2
+      internalID: -1473429611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pyramid_strip6_2
+      name: Square Pyramid_strip12_2
       rect:
         serializedVersion: 2
         x: 256
@@ -175,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84eb25a7254ccbc498272af77680476c
-      internalID: -71955176
+      spriteID: 8fe5396bc24569d44a241909e413a51e
+      internalID: -1963287346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pyramid_strip6_3
+      name: Square Pyramid_strip12_3
       rect:
         serializedVersion: 2
         x: 384
@@ -196,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 016d1dd2eaf07314889188efb9646f03
-      internalID: -700028787
+      spriteID: 9bf299429d3662d4d9cfe775522c1557
+      internalID: -871313928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pyramid_strip6_4
+      name: Square Pyramid_strip12_4
       rect:
         serializedVersion: 2
         x: 512
@@ -217,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c34e34526c35b3146bd2e0d97df1e3c2
-      internalID: 1341284275
+      spriteID: dc3510e8ab7ae0240816eea86e7331bb
+      internalID: -1078229843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pyramid_strip6_5
+      name: Square Pyramid_strip12_5
       rect:
         serializedVersion: 2
         x: 640
@@ -238,8 +250,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b84f4d8760fdf094fbd25927cedb6c2b
-      internalID: -465467474
+      spriteID: 6ea2fa73163a25c4e9f0845a60eb53a7
+      internalID: -1761377665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square Pyramid_strip12_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b6ad1f76bb76c45a5a24161b330e76
+      internalID: -355215980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square Pyramid_strip12_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8156782df7fdb5f4fb3c27f2b9c445b8
+      internalID: 1678140111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square Pyramid_strip12_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da057b5feda7bd42a08353536274e95
+      internalID: -552064106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square Pyramid_strip12_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f993b578980c24d9a1f9731d3e974a
+      internalID: 384868774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square Pyramid_strip12_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f675b7abca77c43b6c788219a5438b
+      internalID: 5582760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square Pyramid_strip12_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c7a70f4881db64c97cf9c07b227039
+      internalID: -525779510
       vertices: []
       indices: 
       edges: []
@@ -247,7 +385,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 85752afcbf7e26a4598baafde602af74
+    spriteID: e1ac91859b6210c458d34aa5071f26e1
     internalID: 0
     vertices: []
     indices: 
@@ -255,12 +393,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pyramid_strip6_1: 997785369
-      Pyramid_strip6_4: 1341284275
-      Pyramid_strip6_0: 1409063464
-      Pyramid_strip6_2: -71955176
-      Pyramid_strip6_3: -700028787
-      Pyramid_strip6_5: -465467474
+      Square Pyramid_strip12_8: -552064106
+      Square Pyramid_strip12_3: -871313928
+      Square Pyramid_strip12_10: 5582760
+      Square Pyramid_strip12_6: -355215980
+      Square Pyramid_strip12_5: -1761377665
+      Square Pyramid_strip12_0: 1811287732
+      Square Pyramid_strip12_11: -525779510
+      Square Pyramid_strip12_4: -1078229843
+      Square Pyramid_strip12_7: 1678140111
+      Square Pyramid_strip12_9: 384868774
+      Square Pyramid_strip12_1: -1473429611
+      Square Pyramid_strip12_2: -1963287346
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
