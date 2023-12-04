@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_isDragging: 0
   m_faceTextureOffset: 0.01
+  m_shapeColour: {r: 0, g: 0, b: 0, a: 0}
   m_emissiveIntensity: 0
   m_rotatableMeshGameOverPrefab: {fileID: 8171494095283850113, guid: ab9ca50dd98f91f4cb9913d52c3d3e0b,
     type: 3}
@@ -1072,7 +1073,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 15
+        scalar: 40
         minScalar: 30
         maxCurve:
           serializedVersion: 2

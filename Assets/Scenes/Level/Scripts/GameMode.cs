@@ -1,25 +1,34 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class GameMode : MonoBehaviour
 {
+    [Header("Gameplay")]
     public float m_score; //The score of the current game
     public uint m_round { get; private set; } = 1; //How many rounds have the player completed
     [SerializeField] float m_startTime; //How much time the player have when they start the game
     [SerializeField] float m_timeDecreaseRate; //How much max time is taken away evey time a round is completed
     [SerializeField] float m_minTime; //The fastest time a round can have
+
     public bool m_paused { get; private set; } = false; //Whether the game is currently paused
     RotatableMesh m_rotatableMesh; //The rotatable mesh that the player interacts with
     GameUI m_gameUI; //Where all the UI elements are stored
+
+    [Header("Graphics")]
+    [SerializeField] float m_winFlashIntensity;
+    [SerializeField] float m_winFlashTime;
 
     [Header("Static Variables")]
     static RotatableMesh m_rotatableMeshPrefab; public static RotatableMesh m_RotatableMeshPrefab
     {
         get
         {
-            if (m_rotatableMeshPrefab == null) m_rotatableMeshPrefab = Resources.Load<RotatableMesh>("Cube");
+            if (m_rotatableMeshPrefab == null) m_rotatableMeshPrefab = AssetDatabase.LoadAssetAtPath<RotatableMesh>("Assets/Scenes/Level/Shapes/Cube.prefab");
             return m_rotatableMeshPrefab;
         }
         set { m_rotatableMeshPrefab = value; }
@@ -107,6 +116,12 @@ public class GameMode : MonoBehaviour
         //Play Win Particles
         m_rotatableMesh.m_winParticles.Play();
 
+        //Make the shape flash
+        {
+            Bloom bloom; Volume volume = FindObjectOfType<Enviroment>().GetComponent<Volume>();
+            if (volume.profile.TryGet(out bloom)) LeanTween.value(gameObject, (float _value) => { bloom.intensity.value = _value; },bloom.intensity.value, bloom.intensity.value + m_winFlashIntensity, m_winFlashTime).setEasePunch();
+        }
+
         //Update current round
         m_round++;
         
@@ -114,8 +129,10 @@ public class GameMode : MonoBehaviour
         RandomizeImage();
 
         //Add Score
-        m_score += Mathf.Round((m_gameUI.m_timerBar.value / m_gameUI.m_timerBar.maxValue) * 100.0f) * 10.0f;
+        float addedScore = Mathf.Round((m_gameUI.m_timerBar.value / m_gameUI.m_timerBar.maxValue) * 100.0f) * 10.0f;
+        m_score += addedScore;
         m_gameUI.m_scoreValueText.text = m_score.ToString();
+        m_gameUI.ShowAddedScore(addedScore);
 
         //Reset Timer
         m_gameUI.m_timerBar.maxValue -= m_timeDecreaseRate;
@@ -131,10 +148,10 @@ public class GameMode : MonoBehaviour
         if (newHighScore) SaveSystem.m_Data.m_highScores[m_currentLevelIndex] = m_score;
 
         //Update UI
-        m_gameUI.m_resultsText.text =
-            $"Score: {m_score}\n" +
-            $"Best: {SaveSystem.m_Data.m_highScores[m_currentLevelIndex]}\n";// + 
-            //$"Earned: {}";
+        //m_gameUI.m_resultsText.text =
+        //    $"Score: {m_score}\n" +
+        //    $"Best: {SaveSystem.m_Data.m_highScores[m_currentLevelIndex]}\n";// + 
+        //    //$"Earned: {}";
 
         //Enable Game Over Canvas
         m_gameUI.m_gameOverCanvas.gameObject.SetActive(true);

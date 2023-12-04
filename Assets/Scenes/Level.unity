@@ -5063,6 +5063,8 @@ MonoBehaviour:
   m_startTime: 10
   m_timeDecreaseRate: 0.2
   m_minTime: 2
+  m_winFlashIntensity: 6
+  m_winFlashTime: 1
 --- !u!114 &666780010
 MonoBehaviour:
   m_ObjectHideFlags: 0

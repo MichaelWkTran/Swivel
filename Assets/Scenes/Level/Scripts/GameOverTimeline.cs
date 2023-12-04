@@ -39,7 +39,7 @@ public class GameOverTimeline : MonoBehaviour
 
         //Set the colour of the death particles
         var deathParticlesMain = m_deathParticles.main;
-        deathParticlesMain.startColor = m_enviroment.m_colour;
+        deathParticlesMain.startColor = FindObjectOfType<RotatableMesh>().m_ShapeColour;
 
         //Setup binding in director
         var director = GetComponent<PlayableDirector>();
