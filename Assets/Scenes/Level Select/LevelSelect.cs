@@ -3,6 +3,7 @@ using UnityEngine;
 public class LevelSelect : MonoBehaviour
 {
     [Header("Level Select Screen")]
+    [SerializeField] Canvas m_levelSelectCanvas;
     [SerializeField] RectTransform m_levelButtonsContent;
     [HideInInspector] public LevelButton[] m_levelButtons;
 
@@ -36,7 +37,10 @@ public class LevelSelect : MonoBehaviour
 
         //Set Background
         //Enviroment.m_CurrentEnviroment = _newEnviromentPrefab;
-        Instantiate(Enviroment.m_CurrentEnviroment);
+        Enviroment newEnviroment = Instantiate(Enviroment.m_CurrentEnviroment);
+
+        //Set Canvas Camera
+        m_levelSelectCanvas.worldCamera = newEnviroment.GetComponent<Camera>();
 
         //Set Level buttons
         foreach (var levelButton in m_levelButtons)

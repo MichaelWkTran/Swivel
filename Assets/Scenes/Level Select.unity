@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.055754807, g: 0.025754955, b: 0.10663158, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1215,7 +1215,7 @@ PrefabInstance:
     - target: {fileID: 4807755118899137715, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 254.99997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4807755118899137715, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
@@ -2304,7 +2304,7 @@ PrefabInstance:
     - target: {fileID: 4807755118899137715, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 254.99997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4807755118899137715, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
@@ -2731,7 +2731,7 @@ PrefabInstance:
     - target: {fileID: 4807755118899137715, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 254.99997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4807755118899137715, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
@@ -3430,7 +3430,7 @@ PrefabInstance:
     - target: {fileID: 4807755118899137715, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 254.99997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4807755118899137715, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
@@ -6030,7 +6030,7 @@ PrefabInstance:
     - target: {fileID: 4807755118899137715, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 254.99997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4807755118899137715, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
@@ -6420,7 +6420,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 17.500015}
+  m_AnchoredPosition: {x: -0.0045776367, y: 17.500015}
   m_SizeDelta: {x: 0, y: -95.00002}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &637209717
@@ -7200,7 +7200,7 @@ PrefabInstance:
     - target: {fileID: 4807755118899137715, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 254.99997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4807755118899137715, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
@@ -7332,6 +7332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19bfadb5cd11ae4fba4e47424452aaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_levelSelectCanvas: {fileID: 948404633}
   m_levelButtonsContent: {fileID: 637209716}
   m_levelButtons: []
 --- !u!4 &726767623
@@ -8940,7 +8941,7 @@ Canvas:
   m_GameObject: {fileID: 948404629}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 302486241}
   m_PlaneDistance: 1
   m_PixelPerfect: 0
@@ -11488,7 +11489,7 @@ PrefabInstance:
     - target: {fileID: 4807755118899137715, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 254.99997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4807755118899137715, guid: 00be0f8901f77e34cb8c2fdd1c78a9dc,
         type: 3}
@@ -12082,7 +12083,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 140.78468, y: 193.46094}
+  m_AnchoredPosition: {x: 140.78467, y: 193.46094}
   m_SizeDelta: {x: 192, y: 192}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1385033697
@@ -13087,8 +13088,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 804352737}
   m_HandleRect: {fileID: 804352736}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 0.43823984
+  m_Value: -0.000001055459
+  m_Size: 0.43818575
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
