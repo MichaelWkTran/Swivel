@@ -143,15 +143,20 @@ public class GameMode : MonoBehaviour
     public void GameOver()
     {
         //Save Data
-        SaveSystem.m_Data.m_money += m_score;
         bool newHighScore = SaveSystem.m_Data.m_highScores[m_currentLevelIndex] < m_score;
         if (newHighScore) SaveSystem.m_Data.m_highScores[m_currentLevelIndex] = m_score;
+        
+        float earnedMoney = Mathf.Round(m_score / 100.0f);
+        SaveSystem.m_Data.m_money += earnedMoney;
 
         //Update UI
         //m_gameUI.m_resultsText.text =
         //    $"Score: {m_score}\n" +
         //    $"Best: {SaveSystem.m_Data.m_highScores[m_currentLevelIndex]}\n";// + 
         //    //$"Earned: {}";
+        m_gameUI.m_gameOverScore.text = m_score.ToString();
+        m_gameUI.m_gameOverHighScore.text = SaveSystem.m_Data.m_highScores[m_currentLevelIndex].ToString();
+        m_gameUI.m_gameOverMoney.text = earnedMoney.ToString();
 
         //Enable Game Over Canvas
         m_gameUI.m_gameOverCanvas.gameObject.SetActive(true);

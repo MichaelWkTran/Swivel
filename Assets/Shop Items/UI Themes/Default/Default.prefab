@@ -4860,6 +4860,9 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   m_resultsText: {fileID: 0}
+  m_gameOverScore: {fileID: 907576496761464161}
+  m_gameOverHighScore: {fileID: 6973826206171177757}
+  m_gameOverMoney: {fileID: 4025449788601672144}
 --- !u!114 &227879900044074302
 MonoBehaviour:
   m_ObjectHideFlags: 0

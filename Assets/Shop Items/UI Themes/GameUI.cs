@@ -34,6 +34,9 @@ public class GameUI : MonoBehaviour
     public Slider m_timerBar; //The UI that shows how much time is left
     public Gradient m_timerBarGradient; //The colour of the timer bar depending on how much time is left
     public TMPro.TMP_Text m_resultsText; //The text that displays the results of a game in the gameover screen
+    public TMPro.TMP_Text m_gameOverScore; //The score shown in the game over screen
+    public TMPro.TMP_Text m_gameOverHighScore; //The high score shown in the game over screen
+    public TMPro.TMP_Text m_gameOverMoney; //The money earned shown in the game over screen
 
     GameMode m_gameMode;
 
