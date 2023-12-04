@@ -344,6 +344,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5016720964259228622, guid: 56d269edc4bed744590c86cdf421085d,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016720964259228622, guid: 56d269edc4bed744590c86cdf421085d,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016720964259228622, guid: 56d269edc4bed744590c86cdf421085d,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.078431375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016720964259228622, guid: 56d269edc4bed744590c86cdf421085d,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016720964259228622, guid: 56d269edc4bed744590c86cdf421085d,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7135777586098338326, guid: 56d269edc4bed744590c86cdf421085d,
         type: 3}
       propertyPath: m_Name
