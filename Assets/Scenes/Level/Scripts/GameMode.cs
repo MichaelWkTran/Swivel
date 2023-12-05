@@ -23,6 +23,10 @@ public class GameMode : MonoBehaviour
     [SerializeField] float m_winFlashIntensity;
     [SerializeField] float m_winFlashTime;
 
+    [Header("Sounds")]
+    [SerializeField] AudioSource m_winAudioSource;
+    [SerializeField] AudioClip[] m_winAudioClips;
+
     [Header("Static Variables")]
     static RotatableMesh m_rotatableMeshPrefab; public static RotatableMesh m_RotatableMeshPrefab
     {
@@ -121,6 +125,9 @@ public class GameMode : MonoBehaviour
             Bloom bloom; Volume volume = FindObjectOfType<Enviroment>().GetComponent<Volume>();
             if (volume.profile.TryGet(out bloom)) LeanTween.value(gameObject, (float _value) => { bloom.intensity.value = _value; },bloom.intensity.value, bloom.intensity.value + m_winFlashIntensity, m_winFlashTime).setEasePunch();
         }
+
+        //Play Sounds
+        m_winAudioSource.PlayOneShot(m_winAudioClips[Random.Range(0, m_winAudioClips.Length)]);
 
         //Update current round
         m_round++;
