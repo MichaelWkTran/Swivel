@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,9 +10,10 @@ public class Carousel : MonoBehaviour
 
     void Update()
     {
+        RectTransform scrollRectTransform = m_scrollRect.GetComponent<RectTransform>();
         foreach (RectTransform child in m_scrollRect.content)
             child.localScale = Vector3.one * m_contentsScale.Evaluate
-                (Vector2.Distance(m_scrollRect.transform.position, child.position) /m_contentsScaleFactor);
+                (Vector2.Distance(scrollRectTransform.TransformPoint(scrollRectTransform.rect.center), child.TransformPoint(child.rect.center)) / m_contentsScaleFactor);
     }
 
     void OnValidate()
