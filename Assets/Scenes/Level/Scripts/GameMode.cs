@@ -127,6 +127,7 @@ public class GameMode : MonoBehaviour
         }
 
         //Play Sounds
+        m_winAudioSource.pitch = Random.Range(0.8f, 2.0f);
         m_winAudioSource.PlayOneShot(m_winAudioClips[Random.Range(0, m_winAudioClips.Length)]);
 
         //Update current round
