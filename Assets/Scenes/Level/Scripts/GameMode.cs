@@ -4,7 +4,9 @@ using UnityEngine.Playables;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 public class GameMode : MonoBehaviour
 {
@@ -32,7 +34,9 @@ public class GameMode : MonoBehaviour
     {
         get
         {
+#if UNITY_EDITOR
             if (m_rotatableMeshPrefab == null) m_rotatableMeshPrefab = AssetDatabase.LoadAssetAtPath<RotatableMesh>("Assets/Scenes/Level/Shapes/Cube.prefab");
+#endif
             return m_rotatableMeshPrefab;
         }
         set { m_rotatableMeshPrefab = value; }
