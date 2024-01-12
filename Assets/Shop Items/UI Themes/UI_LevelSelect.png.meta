@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,7 +123,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 464
+        y: 512
         width: 545
         height: 256
       alignment: 0
@@ -140,11 +140,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Stars_Easy
+      name: UI_Stars_Medal_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 272
+        y: 320
         width: 256
         height: 96
       alignment: 0
@@ -185,8 +185,8 @@ TextureImporter:
       name: UI_LevelX_Header
       rect:
         serializedVersion: 2
-        x: 640
-        y: 624
+        x: 0
+        y: 0
         width: 384
         height: 96
       alignment: 0
@@ -198,27 +198,6 @@ TextureImporter:
       bones: []
       spriteID: 03b44e04ea87def4c8c7d0bcc05dfbfb
       internalID: 547113806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_PanelHeading
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 336
-        width: 704
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92807300ffeb5a444915e1f76b380d6f
-      internalID: 766236360
       vertices: []
       indices: 
       edges: []
@@ -245,11 +224,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Stars_Med
+      name: UI_Stars_Medal_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 176
+        y: 224
         width: 256
         height: 96
       alignment: 0
@@ -270,7 +249,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 368
+        y: 416
         width: 256
         height: 96
       alignment: 0
@@ -287,11 +266,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_Stars_Hard
+      name: UI_Stars_Medal_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
+        y: 128
         width: 256
         height: 96
       alignment: 0
@@ -303,6 +282,216 @@ TextureImporter:
       bones: []
       spriteID: f982254c02cf15f4e99d055ce7b2086e
       internalID: -530407285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Comingsoon_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 503c7a30ee38de24983db5690afe1649
+      internalID: -1296412222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_ScoreIcon_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fdceb99c670ea4a9b0c5d5cef4be4a
+      internalID: 631897983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_ScoreIcon_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4f4912990664142a5ba0f173aa04a1
+      internalID: -1213126238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Comingsoon_2
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 256d874e78a94364fbf2d0a0b6564d30
+      internalID: -975851325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_ScoreIcon_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5965462d73e164aa11f462fee08a8d
+      internalID: 1938770536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_ScoreIcon_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 242ca1fdd3e9f8e4184fb0a3031f1db1
+      internalID: -678410302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_ScoreIcon_5
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fee6622776e14744b6f1e3abaa0258e
+      internalID: 1088964198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_ScoreIcon_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35d070d2bc468d438277c8b63a785dc
+      internalID: 1674589950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_ScoreIcon_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e5acb1d6e962849a37a650d8236328
+      internalID: 2140448012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Currency
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d61905875b59d04f987120bc0fa0666
+      internalID: 230822673
       vertices: []
       indices: 
       edges: []
@@ -320,25 +509,30 @@ TextureImporter:
     nameFileIdTable:
       UI_PanelHeading: 766236360
       UI_LevelSelect_13: -753209478
+      UI_Comingsoon_2: -975851325
+      UI_ScoreIcon_2: 1938770536
       UI_LevelSelect_14: -2069906415
-      UI_Stars_Hard: -530407285
+      UI_ScoreIcon_1: 631897983
+      UI_ScoreIcon_4: -1213126238
       UI_LevelX_Header: 547113806
+      UI_Stars_Medal_1: 846334924
       UI_LevelSelect_19: -1366729932
       UI_LevelSelect_15: -1513414579
       UI_Currency_1: 1022917452
-      UI_LevelSelect_2: 631897983
-      UI_LevelSelect_9: 2140448012
+      UI_ScoreIcon_3: -678410302
+      UI_ScoreIcon_7: 2140448012
       UI_LevelSelect_16: 1233953156
-      UI_LevelSelect_4: -975851325
+      UI_Stars_Medal_2: 2140168936
       UI_Stars_Empty: -1399489480
-      UI_Stars_Med: 2140168936
-      UI_Stars_Easy: 846334924
+      UI_Stars_Medal_3: -530407285
+      UI_Comingsoon_1: -1296412222
+      UI_ScoreIcon_6: 1674589950
       UI_LevelSelect_0: -1298798533
+      UI_Currency: 230822673
       UI_LevelSelect_21: 896514556
-      UI_LevelSelect_8: 1674589950
-      UI_LevelSelect_3: -1213126238
-      UI_LevelSelect_20: 1080954360
       UI_Currency_2: 720463597
+      UI_LevelSelect_20: 1080954360
+      UI_ScoreIcon_5: 1088964198
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
